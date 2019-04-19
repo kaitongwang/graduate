@@ -1,0 +1,198 @@
+2019-04-19 14:42:22,929 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - Starting GraduateApiBootApplication on Coding with PID 9624 (D:\project\graduate\target\classes started by Kt.w in D:\project\graduate)
+2019-04-19 14:42:22,937 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - No active profile set, falling back to default profiles: default
+2019-04-19 14:42:23,380 [ INFO] - org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2019-04-19 14:42:23,597 [ INFO] - org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c2d4cc6: startup date [Fri Apr 19 14:42:23 CST 2019]; root of context hierarchy
+2019-04-19 14:42:25,710 [ INFO] - org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2019-04-19 14:42:25,719 [ INFO] - org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-04-19 14:42:25,720 [ INFO] - org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-04-19 14:42:25,872 [ INFO] - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-04-19 14:42:25,872 [ INFO] - org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2275 ms
+2019-04-19 14:42:26,101 [ INFO] - org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-04-19 14:42:26,104 [ INFO] - org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-04-19 14:42:26,106 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-04-19 14:42:26,106 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-04-19 14:42:26,106 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-04-19 14:42:26,106 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-04-19 14:42:26,106 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2019-04-19 14:42:27,052 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c2d4cc6: startup date [Fri Apr 19 14:42:23 CST 2019]; root of context hierarchy
+2019-04-19 14:42:27,103 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/testboot/getuser],methods=[GET]}" onto public com.lzjd.mis.graduate.api.domain.pojo.User com.lzjd.mis.graduate.api.web.TestBootController.getUser(int)
+2019-04-19 14:42:27,106 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-04-19 14:42:27,106 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-19 14:42:27,132 [ INFO] - org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-19 14:42:27,132 [ INFO] - org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-19 14:42:27,164 [ INFO] - org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-19 14:42:27,193 [ WARN] - org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-19 14:42:27,650 [ INFO] - org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-04-19 14:42:27,652 [ INFO] - org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-04-19 14:42:27,656 [ INFO] - org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-04-19 14:42:27,672 [ INFO] - org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-19 14:42:27,679 [ INFO] - org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-04-19 14:42:27,692 [ INFO] - org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-04-19 14:42:27,713 [ INFO] - org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2019-04-19 14:42:27,720 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - Started GraduateApiBootApplication in 5.828 seconds (JVM running for 9.651)
+2019-04-19 14:42:27,720 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - ============= SpringBoot Start Success =============
+2019-04-19 14:42:50,156 [ INFO] - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-04-19 14:42:50,156 [ INFO] - org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-04-19 14:42:50,172 [ INFO] - org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2019-04-19 14:42:50,254 [ INFO] - com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-04-19 14:46:36,736 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - Starting GraduateApiBootApplication on Coding with PID 3668 (D:\project\graduate\target\classes started by Kt.w in D:\project\graduate)
+2019-04-19 14:46:36,740 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - No active profile set, falling back to default profiles: default
+2019-04-19 14:46:36,994 [ INFO] - org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2019-04-19 14:46:37,018 [ INFO] - org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7573e12f: startup date [Fri Apr 19 14:46:37 CST 2019]; root of context hierarchy
+2019-04-19 14:46:38,661 [ INFO] - org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2019-04-19 14:46:38,686 [ INFO] - org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-04-19 14:46:38,687 [ INFO] - org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-04-19 14:46:38,877 [ INFO] - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-04-19 14:46:38,877 [ INFO] - org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1859 ms
+2019-04-19 14:46:39,264 [ INFO] - org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-04-19 14:46:39,266 [ INFO] - org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-04-19 14:46:39,269 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-04-19 14:46:39,269 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-04-19 14:46:39,269 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-04-19 14:46:39,269 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-04-19 14:46:39,269 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2019-04-19 14:46:40,416 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7573e12f: startup date [Fri Apr 19 14:46:37 CST 2019]; root of context hierarchy
+2019-04-19 14:46:40,510 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/testboot/getuser],methods=[GET]}" onto public com.lzjd.mis.graduate.api.domain.pojo.User com.lzjd.mis.graduate.api.web.TestBootController.getUser(int)
+2019-04-19 14:46:40,513 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-04-19 14:46:40,513 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-19 14:46:40,549 [ INFO] - org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-19 14:46:40,549 [ INFO] - org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-19 14:46:40,602 [ INFO] - org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-19 14:46:40,648 [ WARN] - org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-19 14:46:41,381 [ INFO] - org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-04-19 14:46:41,382 [ INFO] - org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-04-19 14:46:41,389 [ INFO] - org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-04-19 14:46:41,407 [ INFO] - org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-19 14:46:41,415 [ INFO] - org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-04-19 14:46:41,433 [ INFO] - org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-04-19 14:46:41,462 [ INFO] - org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2019-04-19 14:46:41,469 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - Started GraduateApiBootApplication in 5.301 seconds (JVM running for 9.201)
+2019-04-19 14:46:41,470 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - ============= SpringBoot Start Success =============
+2019-04-19 14:47:12,556 [ INFO] - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-04-19 14:47:12,556 [ INFO] - org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-04-19 14:47:12,581 [ INFO] - org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2019-04-19 14:47:12,699 [ INFO] - com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-04-19 14:47:47,320 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - Starting GraduateApiBootApplication on Coding with PID 15020 (D:\project\graduate\target\classes started by Kt.w in D:\project\graduate)
+2019-04-19 14:47:47,329 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - No active profile set, falling back to default profiles: default
+2019-04-19 14:47:47,583 [ INFO] - org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2019-04-19 14:47:47,612 [ INFO] - org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@65bcf7c2: startup date [Fri Apr 19 14:47:47 CST 2019]; root of context hierarchy
+2019-04-19 14:47:49,470 [ INFO] - org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2019-04-19 14:47:49,481 [ INFO] - org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-04-19 14:47:49,482 [ INFO] - org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-04-19 14:47:49,661 [ INFO] - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-04-19 14:47:49,661 [ INFO] - org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2049 ms
+2019-04-19 14:47:49,918 [ INFO] - org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-04-19 14:47:49,919 [ INFO] - org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-04-19 14:47:49,923 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-04-19 14:47:49,923 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-04-19 14:47:49,923 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-04-19 14:47:49,923 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-04-19 14:47:49,924 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2019-04-19 14:47:50,960 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@65bcf7c2: startup date [Fri Apr 19 14:47:47 CST 2019]; root of context hierarchy
+2019-04-19 14:47:51,038 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/testboot/getuser],methods=[GET]}" onto public com.lzjd.mis.graduate.api.domain.pojo.User com.lzjd.mis.graduate.api.web.TestBootController.getUser(int)
+2019-04-19 14:47:51,041 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-04-19 14:47:51,041 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-19 14:47:51,080 [ INFO] - org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-19 14:47:51,080 [ INFO] - org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-19 14:47:51,127 [ INFO] - org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-19 14:47:51,166 [ WARN] - org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-19 14:47:51,912 [ INFO] - org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-04-19 14:47:51,914 [ INFO] - org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-04-19 14:47:51,920 [ INFO] - org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-04-19 14:47:51,938 [ INFO] - org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-19 14:47:51,947 [ INFO] - org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-04-19 14:47:51,964 [ INFO] - org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-04-19 14:47:51,992 [ INFO] - org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2019-04-19 14:47:51,999 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - Started GraduateApiBootApplication in 5.238 seconds (JVM running for 8.739)
+2019-04-19 14:47:51,999 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - ============= SpringBoot Start Success =============
+2019-04-19 14:48:20,661 [ INFO] - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-04-19 14:48:20,661 [ INFO] - org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-04-19 14:48:20,684 [ INFO] - org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2019-04-19 14:48:20,785 [ INFO] - com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-04-19 14:48:21,436 [DEBUG] - com.lzjd.mis.graduate.api.dao.mapper.UserDao.selectByPrimaryKey - ==>  Preparing: select id, user_name, password, age from user_t where id = ? 
+2019-04-19 14:48:21,481 [DEBUG] - com.lzjd.mis.graduate.api.dao.mapper.UserDao.selectByPrimaryKey - ==> Parameters: 33(Integer)
+2019-04-19 14:48:21,561 [DEBUG] - com.lzjd.mis.graduate.api.dao.mapper.UserDao.selectByPrimaryKey - <==      Total: 1
+2019-04-19 14:56:26,000 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - Starting GraduateApiBootApplication on Coding with PID 3132 (D:\project\graduate\target\classes started by Kt.w in D:\project\graduate)
+2019-04-19 14:56:26,002 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - No active profile set, falling back to default profiles: default
+2019-04-19 14:56:26,258 [ INFO] - org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2019-04-19 14:56:26,285 [ INFO] - org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2715644a: startup date [Fri Apr 19 14:56:26 CST 2019]; root of context hierarchy
+2019-04-19 14:56:28,101 [ INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$703afab0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-19 14:56:28,544 [ INFO] - org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2019-04-19 14:56:28,554 [ INFO] - org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-04-19 14:56:28,555 [ INFO] - org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-04-19 14:56:28,775 [ INFO] - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-04-19 14:56:28,775 [ INFO] - org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2490 ms
+2019-04-19 14:56:29,063 [ INFO] - org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-04-19 14:56:29,065 [ INFO] - org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-04-19 14:56:29,068 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-04-19 14:56:29,068 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-04-19 14:56:29,068 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-04-19 14:56:29,068 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-04-19 14:56:29,068 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2019-04-19 14:56:30,332 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/testboot/getuser],methods=[GET]}" onto public com.lzjd.mis.graduate.api.domain.pojo.User com.lzjd.mis.graduate.api.web.TestBootController.getUser(int)
+2019-04-19 14:56:30,334 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-04-19 14:56:30,338 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-04-19 14:56:30,338 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-04-19 14:56:30,338 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-04-19 14:56:30,341 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-04-19 14:56:30,342 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-19 14:56:30,786 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2715644a: startup date [Fri Apr 19 14:56:26 CST 2019]; root of context hierarchy
+2019-04-19 14:56:30,851 [ INFO] - org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-19 14:56:30,851 [ INFO] - org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-19 14:56:30,898 [ INFO] - org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-19 14:56:30,934 [ WARN] - org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-19 14:56:31,588 [ INFO] - org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-04-19 14:56:31,590 [ INFO] - org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-04-19 14:56:31,598 [ INFO] - org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-04-19 14:56:31,603 [ INFO] - org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2019-04-19 14:56:31,713 [ INFO] - org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-19 14:56:31,722 [ INFO] - org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-04-19 14:56:31,738 [ INFO] - org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-04-19 14:56:31,761 [ INFO] - org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2019-04-19 14:56:31,768 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - Started GraduateApiBootApplication in 6.32 seconds (JVM running for 10.705)
+2019-04-19 14:56:31,768 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - ============= SpringBoot Start Success =============
+2019-04-19 14:56:44,326 [ INFO] - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-04-19 14:56:44,326 [ INFO] - org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-04-19 14:56:44,349 [ INFO] - org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2019-04-19 14:58:08,542 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - Starting GraduateApiBootApplication on Coding with PID 14388 (D:\project\graduate\target\classes started by Kt.w in D:\project\graduate)
+2019-04-19 14:58:08,545 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - No active profile set, falling back to default profiles: default
+2019-04-19 14:58:08,812 [ INFO] - org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2019-04-19 14:58:08,855 [ INFO] - org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31ee96f4: startup date [Fri Apr 19 14:58:08 CST 2019]; root of context hierarchy
+2019-04-19 14:58:10,538 [ INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a04806cb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-19 14:58:10,914 [ INFO] - org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2019-04-19 14:58:10,923 [ INFO] - org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-04-19 14:58:10,924 [ INFO] - org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-04-19 14:58:11,098 [ INFO] - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-04-19 14:58:11,098 [ INFO] - org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2243 ms
+2019-04-19 14:58:11,348 [ INFO] - org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-04-19 14:58:11,350 [ INFO] - org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-04-19 14:58:11,352 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-04-19 14:58:11,353 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-04-19 14:58:11,353 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-04-19 14:58:11,353 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-04-19 14:58:11,353 [ INFO] - org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2019-04-19 14:58:12,507 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/testboot/getuser],methods=[GET]}" onto public com.lzjd.mis.graduate.api.domain.pojo.User com.lzjd.mis.graduate.api.web.TestBootController.getUser(int)
+2019-04-19 14:58:12,508 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-04-19 14:58:12,511 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-04-19 14:58:12,512 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-04-19 14:58:12,512 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-04-19 14:58:12,515 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-04-19 14:58:12,515 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-19 14:58:12,910 [ INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31ee96f4: startup date [Fri Apr 19 14:58:08 CST 2019]; root of context hierarchy
+2019-04-19 14:58:12,970 [ INFO] - org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-19 14:58:12,970 [ INFO] - org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-19 14:58:13,014 [ INFO] - org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-19 14:58:13,049 [ WARN] - org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-04-19 14:58:13,719 [ INFO] - org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-04-19 14:58:13,721 [ INFO] - org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-04-19 14:58:13,727 [ INFO] - org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-04-19 14:58:13,732 [ INFO] - org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2019-04-19 14:58:14,079 [ INFO] - org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-19 14:58:14,086 [ INFO] - org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-04-19 14:58:14,100 [ INFO] - org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-04-19 14:58:14,120 [ INFO] - org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2019-04-19 14:58:14,126 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - Started GraduateApiBootApplication in 6.086 seconds (JVM running for 9.412)
+2019-04-19 14:58:14,126 [ INFO] - com.lzjd.mis.graduate.GraduateApiBootApplication - ============= SpringBoot Start Success =============
+2019-04-19 14:58:16,939 [ INFO] - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-04-19 14:58:16,939 [ INFO] - org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-04-19 14:58:16,963 [ INFO] - org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
