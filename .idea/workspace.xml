@@ -11,10 +11,102 @@
   <component name="ChangeListManager">
     <list default="true" id="c2e83b7b-60bb-49d4-8a00-90218ba2eef0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/banner.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lzjd/mis/graduate/GraduateApiBootApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lzjd/mis/graduate/api/base/common/HttpResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lzjd/mis/graduate/api/base/config/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lzjd/mis/graduate/api/domain/pojo/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT.war.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/banner.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/com/lzjd/mis/graduate/GraduateApiBootApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/com/lzjd/mis/graduate/api/base/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/com/lzjd/mis/graduate/api/dao/mapper/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/com/lzjd/mis/graduate/api/domain/pojo/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/com/lzjd/mis/graduate/api/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/com/lzjd/mis/graduate/api/service/impl/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/com/lzjd/mis/graduate/api/web/TestBootController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/sqlmap/mybatis/mysql/mapper/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/classmate-1.3.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/druid-1.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/druid-spring-boot-starter-1.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/groovy-2.4.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/guava-18.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/hibernate-validator-5.3.5.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/jackson-annotations-2.8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/jackson-core-2.8.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/jackson-databind-2.8.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/jackson-datatype-joda-2.8.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/jackson-module-parameter-names-2.8.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/javassist-3.21.0-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/jboss-logging-3.3.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/jcl-over-slf4j-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/joda-time-2.9.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/jsqlparser-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/jul-to-slf4j-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/log4j-over-slf4j-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/logback-classic-1.1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/logback-core-1.1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/mapstruct-1.0.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/mybatis-3.4.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/mybatis-spring-1.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/mybatis-spring-boot-autoconfigure-1.3.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/mybatis-spring-boot-starter-1.3.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-java-5.1.35.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/ognl-3.0.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/pagehelper-5.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/pagehelper-spring-boot-autoconfigure-1.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/pagehelper-spring-boot-starter-1.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/snakeyaml-1.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-4.3.10.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-4.3.10.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-1.5.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-autoconfigure-1.5.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-1.5.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-jdbc-1.5.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-logging-1.5.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-thymeleaf-1.5.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-tomcat-1.5.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-web-1.5.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-context-4.3.10.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-core-4.3.10.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-4.3.10.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-jdbc-4.3.10.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-plugin-core-1.2.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-plugin-metadata-1.2.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-tx-4.3.10.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-web-4.3.10.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-webmvc-4.3.10.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/springfox-core-2.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/springfox-schema-2.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/springfox-spi-2.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/springfox-spring-web-2.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/springfox-swagger-common-2.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/springfox-swagger-ui-2.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/springfox-swagger2-2.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/swagger-annotations-1.5.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/swagger-models-1.5.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/thymeleaf-2.1.5.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/thymeleaf-layout-dialect-1.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/thymeleaf-spring4-2.1.5.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/tomcat-embed-core-8.5.16.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/tomcat-embed-el-8.5.16.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/tomcat-embed-websocket-8.5.16.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/tomcat-jdbc-8.5.16.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/tomcat-juli-8.5.16.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/unbescape-1.1.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/validation-api-1.1.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -57,6 +149,7 @@
         <counts>
           <entry key="class" value="3" />
           <entry key="dtd" value="1" />
+          <entry key="gitignore" value="1" />
           <entry key="iml" value="2" />
           <entry key="java" value="50" />
           <entry key="mapper" value="1" />
@@ -73,7 +166,7 @@
           <entry key="DTD" value="1" />
           <entry key="IDEA_MODULE" value="2" />
           <entry key="JAVA" value="50" />
-          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="PLAIN_TEXT" value="5" />
           <entry key="Properties" value="3" />
           <entry key="XML" value="18" />
           <entry key="YAML" value="8" />
@@ -83,7 +176,7 @@
         <counts>
           <entry key="java" value="1857" />
           <entry key="properties" value="76" />
-          <entry key="txt" value="48" />
+          <entry key="txt" value="54" />
           <entry key="xml" value="115" />
           <entry key="yml" value="90" />
         </counts>
@@ -91,7 +184,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="1857" />
-          <entry key="PLAIN_TEXT" value="48" />
+          <entry key="PLAIN_TEXT" value="54" />
           <entry key="Properties" value="76" />
           <entry key="SQL" value="3" />
           <entry key="XML" value="112" />
@@ -106,7 +199,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/service/impl/BaseServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="157">
-              <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+              <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,27 +238,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/dao/mapper/EncodingRuleDao.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/sqlmap/mybatis/mysql/mapper/EncodingRuleDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="425">
+              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/sqlmap/mybatis/mysql/mapper/EncodingRuleDao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/web/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="247">
@@ -179,6 +260,11 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -328,245 +414,6 @@
               <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
               <item name="graduate" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
-              <item name="mis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
-              <item name="mis" type="462c0819:PsiDirectoryNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
-              <item name="mis" type="462c0819:PsiDirectoryNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
-              <item name="mis" type="462c0819:PsiDirectoryNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
-              <item name="mis" type="462c0819:PsiDirectoryNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
-              <item name="mis" type="462c0819:PsiDirectoryNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-              <item name="enumtype" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
-              <item name="mis" type="462c0819:PsiDirectoryNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
-              <item name="mis" type="462c0819:PsiDirectoryNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
-              <item name="mis" type="462c0819:PsiDirectoryNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
-              <item name="mis" type="462c0819:PsiDirectoryNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
-              <item name="mis" type="462c0819:PsiDirectoryNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
-              <item name="mis" type="462c0819:PsiDirectoryNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="sqlmap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="sqlmap" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="sqlmap" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="mysql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="sqlmap" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="mysql" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduate" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -582,7 +429,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555820835293" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555821941662" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -597,6 +444,7 @@
       <recent name="com.lzjd.mis.graduate.api.domain.pojo" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\graduate" />
       <recent name="D:\project\graduate\src\main\resources\sqlmap\mybatis\mysql\mapper" />
       <recent name="D:\project\graduate\src\main\resources" />
     </key>
@@ -648,7 +496,7 @@
       <workItem from="1555667424999" duration="1177000" />
       <workItem from="1555676952882" duration="3319000" />
       <workItem from="1555728066057" duration="4307000" />
-      <workItem from="1555815314483" duration="5042000" />
+      <workItem from="1555815314483" duration="5700000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目架构">
       <created>1555666882065</created>
@@ -685,11 +533,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555819771609</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="设置忽略文件">
+      <created>1555820862208</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1555820862208</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27937000" />
+    <option name="totallyTimeSpent" value="28595000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -701,8 +556,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2185501" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -727,7 +581,7 @@
       <window_info anchor="bottom" id="Problems" order="11" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="14" visible="true" weight="0.28555918" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="14" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="JRebel Executor" order="15" weight="0.5119306" />
       <window_info anchor="bottom" id="JRebel Console" order="16" sideWeight="0.5010661" side_tool="true" weight="0.52603036" />
       <window_info anchor="bottom" id="Messages" order="17" sideWeight="0.4989339" weight="0.4208243" />
@@ -754,7 +608,8 @@
     <MESSAGE value="登陆用户信息" />
     <MESSAGE value="客户的登录注册以及退出登录" />
     <MESSAGE value="登录注册显示" />
-    <option name="LAST_COMMIT_MESSAGE" value="登录注册显示" />
+    <MESSAGE value="设置忽略文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="设置忽略文件" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/domain/pojo/TestBootController.java" />
@@ -922,7 +777,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/sqlmap/mybatis/mysql/mapper/EncodingRuleDao.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -966,7 +821,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/service/impl/BaseServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
-          <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -993,6 +848,9 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
