@@ -5,24 +5,24 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
-@ApiModel("å®¢æˆ·è¡¨")
+@ApiModel("客户实体")
 public class Customer {
-    @ApiModelProperty("ä¸»é”®")
+    @ApiModelProperty("主键")
     private Integer id;
 
-    @ApiModelProperty("ç”¨æˆ·ç¼–ç �")
+    @ApiModelProperty("客户编码")
     private String customerCode;
 
-    @ApiModelProperty("ç”¨æˆ·å��ç§°")
+    @ApiModelProperty("客户名称")
     private String customerName;
 
-    @ApiModelProperty("å¯†ç �")
+    @ApiModelProperty("客户密码 ")
     private String customerPassword;
 
-    @ApiModelProperty("ç”µè¯�")
+    @ApiModelProperty("电话")
     private String telephone;
 
-    @ApiModelProperty("åœ°å�€")
+    @ApiModelProperty("地址")
     private String address;
 
 }

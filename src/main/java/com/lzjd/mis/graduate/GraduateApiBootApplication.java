@@ -6,7 +6,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
 
 /**
  * @Classname: GraduateApiBootApplication
@@ -26,5 +31,25 @@ public class GraduateApiBootApplication {
     public static void main(String[] args) {
         SpringApplication.run(GraduateApiBootApplication.class, args);
         LOGGER.info("============= SpringBoot Start Success =============");
+    }
+
+    @Configuration
+    public class CorsConfig {
+        private CorsConfiguration buildConfig() {
+            CorsConfiguration corsConfiguration = new CorsConfiguration();
+            corsConfiguration.addAllowedOrigin("*"); // 1
+            corsConfiguration.addAllowedHeader("*"); // 2
+            corsConfiguration.addAllowedMethod("*"); // 3
+            return corsConfiguration;
+        }
+
+
+        @Bean
+        public CorsFilter corsFilter() {
+            LOGGER.info("============= 设置跨域过滤器 =============");
+            UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+            source.registerCorsConfiguration("/**", buildConfig()); // 4
+            return new CorsFilter(source);
+        }
     }
 }
