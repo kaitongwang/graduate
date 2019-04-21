@@ -130,7 +130,7 @@ public class LoginServiceImpl implements LoginService {
             encodingRuleDao.updateNumberValue(encodingRule.getNumberingValue(),encodingRule.getId());
 
             //插入客户
-            int i = customerMapper.insert(customer);
+            int i = customerMapper.insertSelective(customer);
 
             return HttpResponse.success(i);
         } catch (Exception e) {

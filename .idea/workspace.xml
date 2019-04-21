@@ -11,102 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c2e83b7b-60bb-49d4-8a00-90218ba2eef0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/banner.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lzjd/mis/graduate/GraduateApiBootApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lzjd/mis/graduate/api/base/common/HttpResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lzjd/mis/graduate/api/base/config/SwaggerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lzjd/mis/graduate/api/domain/pojo/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/logback.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT.war.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/banner.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/com/lzjd/mis/graduate/GraduateApiBootApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/com/lzjd/mis/graduate/api/base/SwaggerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/com/lzjd/mis/graduate/api/dao/mapper/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/com/lzjd/mis/graduate/api/domain/pojo/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/com/lzjd/mis/graduate/api/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/com/lzjd/mis/graduate/api/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/com/lzjd/mis/graduate/api/web/TestBootController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/logback.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/classes/sqlmap/mybatis/mysql/mapper/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/classmate-1.3.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/druid-1.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/druid-spring-boot-starter-1.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/groovy-2.4.12.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/guava-18.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/hibernate-validator-5.3.5.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/jackson-annotations-2.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/jackson-core-2.8.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/jackson-databind-2.8.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/jackson-datatype-joda-2.8.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/jackson-module-parameter-names-2.8.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/javassist-3.21.0-GA.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/jboss-logging-3.3.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/jcl-over-slf4j-1.7.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/joda-time-2.9.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/jsqlparser-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/jul-to-slf4j-1.7.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/log4j-over-slf4j-1.7.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/logback-classic-1.1.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/logback-core-1.1.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/mapstruct-1.0.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/mybatis-3.4.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/mybatis-spring-1.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/mybatis-spring-boot-autoconfigure-1.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/mybatis-spring-boot-starter-1.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-java-5.1.35.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/ognl-3.0.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/pagehelper-5.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/pagehelper-spring-boot-autoconfigure-1.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/pagehelper-spring-boot-starter-1.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.7.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/snakeyaml-1.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-4.3.10.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-4.3.10.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-1.5.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-autoconfigure-1.5.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-1.5.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-jdbc-1.5.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-logging-1.5.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-thymeleaf-1.5.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-tomcat-1.5.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-web-1.5.6.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-context-4.3.10.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-core-4.3.10.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-4.3.10.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-jdbc-4.3.10.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-plugin-core-1.2.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-plugin-metadata-1.2.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-tx-4.3.10.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-web-4.3.10.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/spring-webmvc-4.3.10.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/springfox-core-2.6.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/springfox-schema-2.6.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/springfox-spi-2.6.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/springfox-spring-web-2.6.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/springfox-swagger-common-2.6.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/springfox-swagger-ui-2.6.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/springfox-swagger2-2.6.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/swagger-annotations-1.5.10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/swagger-models-1.5.10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/thymeleaf-2.1.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/thymeleaf-layout-dialect-1.4.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/thymeleaf-spring4-2.1.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/tomcat-embed-core-8.5.16.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/tomcat-embed-el-8.5.16.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/tomcat-embed-websocket-8.5.16.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/tomcat-jdbc-8.5.16.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/tomcat-juli-8.5.16.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/unbescape-1.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/graduate-1.0-SNAPSHOT/WEB-INF/lib/validation-api-1.1.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/service/impl/LoginServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -137,12 +42,13 @@
     <session id="-20659561">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -198,7 +104,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/service/impl/BaseServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
+            <state relative-caret-position="475">
               <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -216,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/service/impl/LoginServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
-              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+            <state relative-caret-position="527">
+              <caret line="132" column="50" selection-start-line="132" selection-start-column="50" selection-end-line="132" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -249,20 +155,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/web/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
+            <state relative-caret-position="350">
               <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1302#1303#0" expanded="true" />
-                <element signature="e#1352#1353#0" expanded="true" />
-                <element signature="e#1538#1539#0" expanded="true" />
-                <element signature="e#1591#1592#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -270,7 +172,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/service/LoginService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="699">
+            <state relative-caret-position="875">
               <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -294,8 +196,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/sqlmap/mybatis/mysql/mapper/CustomerMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="768">
-              <caret line="180" column="2" selection-start-line="180" selection-start-column="2" selection-end-line="180" selection-end-column="2" />
+            <state relative-caret-position="543">
+              <caret line="91" column="29" selection-start-line="91" selection-start-column="14" selection-end-line="91" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -341,8 +243,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/dao/mapper/EncodingRuleDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/sqlmap/mybatis/mysql/mapper/EncodingRuleDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/base/enumtype/EncodingRuleType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/service/impl/LoginServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/web/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/service/impl/LoginServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -405,7 +307,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -414,10 +315,133 @@
               <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
               <item name="graduate" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
+              <item name="mis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
+              <item name="mis" type="462c0819:PsiDirectoryNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
+              <item name="mis" type="462c0819:PsiDirectoryNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
+              <item name="mis" type="462c0819:PsiDirectoryNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
+              <item name="mis" type="462c0819:PsiDirectoryNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
+              <item name="mis" type="462c0819:PsiDirectoryNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lzjd" type="462c0819:PsiDirectoryNode" />
+              <item name="mis" type="462c0819:PsiDirectoryNode" />
+              <item name="graduate" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -429,7 +453,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555821941662" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555822183526" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -496,7 +520,8 @@
       <workItem from="1555667424999" duration="1177000" />
       <workItem from="1555676952882" duration="3319000" />
       <workItem from="1555728066057" duration="4307000" />
-      <workItem from="1555815314483" duration="5700000" />
+      <workItem from="1555815314483" duration="6329000" />
+      <workItem from="1555824403140" duration="249000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目架构">
       <created>1555666882065</created>
@@ -540,11 +565,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555820862208</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="设置忽略文件">
+      <created>1555821962522</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1555821962522</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28595000" />
+    <option name="totallyTimeSpent" value="29473000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -557,8 +589,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2185501" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22068231" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" side_tool="true" />
@@ -570,7 +603,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.0" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5537459" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.21064061" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.40608034" />
@@ -581,7 +614,7 @@
       <window_info anchor="bottom" id="Problems" order="11" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="14" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.35939196" />
       <window_info anchor="bottom" id="JRebel Executor" order="15" weight="0.5119306" />
       <window_info anchor="bottom" id="JRebel Console" order="16" sideWeight="0.5010661" side_tool="true" weight="0.52603036" />
       <window_info anchor="bottom" id="Messages" order="17" sideWeight="0.4989339" weight="0.4208243" />
@@ -610,6 +643,18 @@
     <MESSAGE value="登录注册显示" />
     <MESSAGE value="设置忽略文件" />
     <option name="LAST_COMMIT_MESSAGE" value="设置忽略文件" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/service/impl/LoginServiceImpl.java</url>
+          <line>119</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/domain/pojo/TestBootController.java" />
@@ -751,9 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -761,66 +803,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sqlmap/mybatis/mysql/mapper/CustomerMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="180" column="2" selection-start-line="180" selection-start-column="2" selection-end-line="180" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sqlmap/mybatis/mysql/mapper/EncodingRuleDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/base/enumtype/EncodingRuleType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/service/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/service/impl/LoginServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/dao/mapper/CustomerMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/service/impl/BaseServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
+        <state relative-caret-position="475">
           <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -835,22 +823,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/base/enumtype/EncodingRuleType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sqlmap/mybatis/mysql/mapper/EncodingRuleDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/web/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
+        <state relative-caret-position="350">
           <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1302#1303#0" expanded="true" />
-            <element signature="e#1352#1353#0" expanded="true" />
-            <element signature="e#1538#1539#0" expanded="true" />
-            <element signature="e#1591#1592#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/service/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/dao/mapper/CustomerMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sqlmap/mybatis/mysql/mapper/CustomerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="91" column="29" selection-start-line="91" selection-start-column="14" selection-end-line="91" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lzjd/mis/graduate/api/service/impl/LoginServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="132" column="50" selection-start-line="132" selection-start-column="50" selection-end-line="132" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

@@ -169,7 +169,7 @@
     COUNT(1)
     FROM
     customer
-    WHERE 1-1
+    WHERE 1=1
     <if test="name!=null and name!=''">
       AND customer_name = #{name,jdbcType=VARCHAR}
     </if>
