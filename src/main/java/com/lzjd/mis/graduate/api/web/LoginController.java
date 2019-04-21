@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @RestController
 @EnableAutoConfiguration
-@Api("登陆控制器" )
+@Api(description = "登录控制器")
 @RequestMapping("/login")
 public class LoginController {
 
