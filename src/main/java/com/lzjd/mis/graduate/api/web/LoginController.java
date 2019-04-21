@@ -37,8 +37,9 @@ public class LoginController {
      */
     @ApiOperation("用户登录")
     @PostMapping("/landing")
-    public HttpResponse login(@RequestBody User user, @RequestParam(value = "类型，0 是客户登陆。1是员工登陆" ) Byte type){
-        return HttpResponse.success();
+    public HttpResponse login(@RequestBody User user, @RequestParam(value = "type" ) Byte type){
+        return loginService.login(user,type);
+
     }
 
 

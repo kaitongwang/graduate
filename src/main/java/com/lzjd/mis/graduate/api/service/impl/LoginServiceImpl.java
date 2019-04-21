@@ -39,7 +39,7 @@ public class LoginServiceImpl implements LoginService {
         try{
 
             //如果type等于0则说明是客户登陆
-            if (type.equals("0")){
+            if (type==0){
                 // 通过用户名查询用户
                 //验证密码是否通过
                 Customer customer =customerMapper.selectByName(user.getUserName());
