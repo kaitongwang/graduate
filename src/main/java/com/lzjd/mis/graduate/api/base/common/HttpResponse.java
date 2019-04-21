@@ -47,4 +47,8 @@ public class HttpResponse<T> {
     public static HttpResponse success(Object data) {
         return new HttpResponse(data);
     }
+
+    public static HttpResponse failure(String message) {
+        return new HttpResponse("520", message);
+    }
 }

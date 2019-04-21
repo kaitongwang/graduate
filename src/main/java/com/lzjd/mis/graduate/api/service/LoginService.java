@@ -1,7 +1,10 @@
 package com.lzjd.mis.graduate.api.service;
 
 import com.lzjd.mis.graduate.api.base.common.HttpResponse;
+import com.lzjd.mis.graduate.api.domain.pojo.Customer;
 import com.lzjd.mis.graduate.api.domain.pojo.User;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @Classname: LoginService
@@ -18,5 +21,21 @@ public interface LoginService {
      * @param user
      * @return
      */
-    HttpResponse login(User user);
+    HttpResponse login(User user ,Byte type);
+
+
+    /**
+     * 退出登录用户信息
+     * @param request
+     * @return
+     */
+    HttpResponse logout(HttpServletRequest request);
+
+
+    /**
+     * 注册客户
+     * @param customer
+     * @return
+     */
+    HttpResponse checkIn( Customer customer);
 }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzjd.mis.graduate.api.dao.mapper.EncodingRuleDao">
+    <resultMap id="BaseResultMap" type="com.lzjd.mis.graduate.api.domain.pojo.EncodingRule">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="numbering_type" jdbcType="VARCHAR" property="numberingType" />
+        <result column="numbering_value" jdbcType="BIGINT" property="numberingValue" />
+        <result column="numbering_name" jdbcType="VARCHAR" property="numberingName" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, numbering_type, numbering_value, numbering_name
+    </sql>
+  <!--获取数据库中编码最大值-->
+  <select id="getNumberValue" parameterType="java.lang.Long" resultType="java.lang.Long">
+      SELECT  numbering_value from encoding_rule WHERE id = #{id,jdbcType=BIGINT}
+  </select>
+  <!--修改数据库中编码最大值-->
+  <update id="updateNumberValue">
+      UPDATE encoding_rule SET numbering_value=#{versionValue}+1 WHERE
+      <if test="versionValue!=null and id!=null" >
+          numbering_value =#{versionValue}
+         AND id = #{id,jdbcType=BIGINT}
+      </if>
+  </update>
+    <select id="getNumberingType" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List" />
+        from encoding_rule WHERE numbering_type = #{numberingType,jdbcType=VARCHAR}
+    </select>
+</mapper>
