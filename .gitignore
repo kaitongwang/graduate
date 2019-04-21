@@ -1,0 +1,13 @@
+target/
+.idea/
+
+*.bak
+*.iml
+*.versionsBackup
+.DS_Store
+.project
+.settings
+.classpath
+.sonar/
+APP_HOME_IS_UNDEFINED/
+/bash.exe.stackdump
