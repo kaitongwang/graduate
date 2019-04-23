@@ -14,5 +14,9 @@ public interface EncodingRuleType {
      */
     String  CUSTOMER_CODE="CUSTOMER_CODE";
 
+    /**
+     * 员工类型编码
+     */
+    String  EMPLOYEE_CODE="EMPLOYEE_CODE";
 
 }

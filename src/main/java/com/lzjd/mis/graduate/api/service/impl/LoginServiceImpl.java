@@ -3,8 +3,10 @@ package com.lzjd.mis.graduate.api.service.impl;
 import com.lzjd.mis.graduate.api.base.common.HttpResponse;
 import com.lzjd.mis.graduate.api.base.enumtype.EncodingRuleType;
 import com.lzjd.mis.graduate.api.dao.mapper.CustomerMapper;
+import com.lzjd.mis.graduate.api.dao.mapper.EmployeeMapper;
 import com.lzjd.mis.graduate.api.dao.mapper.EncodingRuleDao;
 import com.lzjd.mis.graduate.api.domain.pojo.Customer;
+import com.lzjd.mis.graduate.api.domain.pojo.Employee;
 import com.lzjd.mis.graduate.api.domain.pojo.EncodingRule;
 import com.lzjd.mis.graduate.api.domain.pojo.User;
 import com.lzjd.mis.graduate.api.service.LoginService;
@@ -34,6 +36,9 @@ public class LoginServiceImpl implements LoginService {
     @Autowired
     private EncodingRuleDao encodingRuleDao;
 
+    @Autowired
+    private EmployeeMapper employeeMapper;
+
     @Override
     public HttpResponse login(User user, Byte type) {
         try{
@@ -58,21 +63,27 @@ public class LoginServiceImpl implements LoginService {
             }else {
                 //如果是用户登陆
                 // 通过用户名查询用户
-                // 验证密码是否相等
+                Employee employee = employeeMapper.selectByName(user.getUserName());
+                // 验证用户是否可以登录
+                if(employee.equals(null)){
+                    return HttpResponse.failure("用户不存在");
 
-                HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-                HttpSession session = request.getSession();
+                }else if(employee.getStatusCode().equals(0)) {
+                   return HttpResponse.failure("你已离职无法登录");
+                }else if(!user.getPassword().equals(employee.getName())){
+                   // 验证密码是否相等
+                   return HttpResponse.failure("密码错误");
+               }else {
+                   HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+                   HttpSession session = request.getSession();
 
-                session.setAttribute("username",user.getUserName());
-                session.setAttribute("code",111);
-
-
-                return HttpResponse.success("登录成功");
+                   session.setAttribute("username",user.getUserName());
+                   session.setAttribute("code",111);
+                   return HttpResponse.success("登录成功");
+               }
             }
 
         }catch ( Exception e){
-
-
             return HttpResponse.failure("登陆失败");
         }
 
