@@ -2,15 +2,13 @@ package com.lzjd.mis.graduate.api.web;
 
 import com.lzjd.mis.graduate.api.base.common.HttpResponse;
 import com.lzjd.mis.graduate.api.domain.pojo.Employee;
+import com.lzjd.mis.graduate.api.domain.request.EmployeeViewVo;
 import com.lzjd.mis.graduate.api.service.EmployeeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Classname: EmployeeController
@@ -38,5 +36,24 @@ public class EmployeeController {
     @ApiOperation("添加员工信息")
     public HttpResponse add(@RequestBody Employee employee){
          return employeeService.add(employee);
+    }
+
+    @PostMapping("/list")
+    @ApiOperation("获取员工列表")
+    public HttpResponse getList(@RequestBody EmployeeViewVo employee){
+        return employeeService.getList(employee);
+    }
+
+
+    @GetMapping("/view")
+    @ApiOperation("获取员工信息")
+    public HttpResponse view(@RequestParam (value = "id") long id){
+        return employeeService.view(id);
+    }
+
+    @PostMapping("/update")
+    @ApiOperation("修改员工信息")
+    public HttpResponse update(@RequestBody Employee employee){
+        return employeeService.update(employee);
     }
 }

@@ -231,4 +231,12 @@
       AND id!=#{id,jdbcType=INTEGER}
     </if>
   </select>
+
+  <select id="getEmployeelist" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from employee
+    where name != "admin"
+  </select>
+
 </mapper>

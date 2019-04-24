@@ -28,4 +28,6 @@ public interface EmployeeMapper {
      * @return
      */
     Integer checkName(@Param("name")String name, @Param("id")Long id);
+
+    List<Employee> getEmployeelist();
 }
