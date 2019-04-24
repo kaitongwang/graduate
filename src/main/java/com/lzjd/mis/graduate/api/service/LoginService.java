@@ -3,6 +3,7 @@ package com.lzjd.mis.graduate.api.service;
 import com.lzjd.mis.graduate.api.base.common.HttpResponse;
 import com.lzjd.mis.graduate.api.domain.pojo.Customer;
 import com.lzjd.mis.graduate.api.domain.pojo.User;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -38,4 +39,12 @@ public interface LoginService {
      * @return
      */
     HttpResponse checkIn( Customer customer);
+
+
+    /**
+     * 上传文件
+     * @param file
+     * @return
+     */
+     String Upload(MultipartFile file);
 }

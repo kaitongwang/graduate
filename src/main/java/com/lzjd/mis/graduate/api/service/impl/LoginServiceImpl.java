@@ -10,14 +10,19 @@ import com.lzjd.mis.graduate.api.domain.pojo.Employee;
 import com.lzjd.mis.graduate.api.domain.pojo.EncodingRule;
 import com.lzjd.mis.graduate.api.domain.pojo.User;
 import com.lzjd.mis.graduate.api.service.LoginService;
+import com.lzjd.mis.graduate.api.util.FileUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.ClassUtils;
+import org.springframework.util.ResourceUtils;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 
 /**
  * @Classname: LoginServiceImpl
@@ -148,5 +153,35 @@ public class LoginServiceImpl implements LoginService {
             e.printStackTrace();
             return HttpResponse.failure("注册失败");
         }
+    }
+
+
+
+    @Override
+    public String Upload(MultipartFile file) {
+        if(!file.isEmpty()) {
+            // 获取文件名称,包含后缀
+            String fileName = file.getOriginalFilename();
+
+            // 存放在这个路径下：该路径是该工程目录下的static文件下：(注：该文件可能需要自己创建)
+            // 放在static下的原因是，存放的是静态文件资源，即通过浏览器输入本地服务器地址，加文件名时是可以访问到的
+            String path = "D://temp-rainy//";
+
+            try {
+                // 该方法是对文件写入的封装，在util类中，导入该包即可使用，后面会给出方法
+                FileUtil.fileupload(file.getBytes(), path, fileName);
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+                return null;
+            }
+
+            // 接着创建对应的实体类，将以下路径进行添加，然后通过数据库操作方法写入
+           String url;
+            url ="/temp-rainy/"+fileName;
+            return url;
+
+        }
+        return null;
     }
 }

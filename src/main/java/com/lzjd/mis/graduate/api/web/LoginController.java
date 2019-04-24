@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -67,7 +68,16 @@ public class LoginController {
         return loginService.checkIn(customer);
     }
 
-
+    /**
+     * 上传文件
+     * @param file
+     * @return
+     */
+    @ApiOperation("上传文件65")
+    @PostMapping("/upload")
+    public String upload(@RequestParam("file") MultipartFile file) {
+        return loginService.Upload(file);
+    }
 
 
 }

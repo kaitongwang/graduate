@@ -40,3 +40,9 @@ mybatis:
 logging:
     level:
       com.lzjd.mis.graduate.api.dao.mapper: debug
+
+Spring:
+  servlet:
+    multipart:
+      max-file-size: 128MB
+      max-request-size: 128MB
