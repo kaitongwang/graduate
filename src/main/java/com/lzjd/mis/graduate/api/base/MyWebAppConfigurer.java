@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 public class MyWebAppConfigurer extends WebMvcConfigurerAdapter {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/temp-rainy/**").addResourceLocations("file:D:/temp-rainy/");
+        registry.addResourceHandler("/temp-rainy/**").addResourceLocations("file:"+System.getProperty("user.dir")+"/");
         super.addResourceHandlers(registry);
     }
 }

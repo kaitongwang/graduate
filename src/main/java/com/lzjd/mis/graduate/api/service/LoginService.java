@@ -6,6 +6,7 @@ import com.lzjd.mis.graduate.api.domain.pojo.User;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import java.net.UnknownHostException;
 
 /**
  * @Classname: LoginService
@@ -46,5 +47,5 @@ public interface LoginService {
      * @param file
      * @return
      */
-     String Upload(MultipartFile file);
+     String Upload(MultipartFile file) ;
 }

@@ -1,6 +1,7 @@
 package com.lzjd.mis.graduate.api.service.impl;
 
 import com.lzjd.mis.graduate.api.base.common.HttpResponse;
+import com.lzjd.mis.graduate.api.base.config.UrlConfig;
 import com.lzjd.mis.graduate.api.base.enumtype.EncodingRuleType;
 import com.lzjd.mis.graduate.api.dao.mapper.CustomerMapper;
 import com.lzjd.mis.graduate.api.dao.mapper.EmployeeMapper;
@@ -14,15 +15,16 @@ import com.lzjd.mis.graduate.api.util.FileUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.ClassUtils;
-import org.springframework.util.ResourceUtils;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.multipart.MultipartFile;
+import sun.net.www.http.HttpClient;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 /**
  * @Classname: LoginServiceImpl
@@ -43,6 +45,7 @@ public class LoginServiceImpl implements LoginService {
 
     @Autowired
     private EmployeeMapper employeeMapper;
+
 
     @Override
     public HttpResponse login(User user, Byte type) {
@@ -165,7 +168,8 @@ public class LoginServiceImpl implements LoginService {
 
             // 存放在这个路径下：该路径是该工程目录下的static文件下：(注：该文件可能需要自己创建)
             // 放在static下的原因是，存放的是静态文件资源，即通过浏览器输入本地服务器地址，加文件名时是可以访问到的
-            String path = "D://temp-rainy//";
+//            String path = "D://temp-rainy//";
+            String  path =System.getProperty("user.dir")+"/";
 
             try {
                 // 该方法是对文件写入的封装，在util类中，导入该包即可使用，后面会给出方法
@@ -178,7 +182,19 @@ public class LoginServiceImpl implements LoginService {
 
             // 接着创建对应的实体类，将以下路径进行添加，然后通过数据库操作方法写入
            String url;
-            url ="/temp-rainy/"+fileName;
+            String addr = null;
+            try {
+                addr = InetAddress.getLocalHost().getHostAddress();
+            } catch (UnknownHostException e) {
+                e.printStackTrace();
+            }
+            try {
+                System.out.println(InetAddress.getLocalHost());
+                url =  "http://"+InetAddress.getLocalHost().getHostAddress()+":9021/temp-rainy/"+fileName;
+            } catch (UnknownHostException e) {
+                e.printStackTrace();
+                return null;
+            }
             return url;
 
         }
