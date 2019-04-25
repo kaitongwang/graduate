@@ -19,4 +19,9 @@ public interface EncodingRuleType {
      */
     String  EMPLOYEE_CODE="EMPLOYEE_CODE";
 
+
+    /**
+     * 公告编码类型
+     */
+    String NOTICE_CODE="NOTICE_CODE";
 }
