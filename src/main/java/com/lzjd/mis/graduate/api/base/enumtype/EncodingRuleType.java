@@ -24,4 +24,9 @@ public interface EncodingRuleType {
      * 公告编码类型
      */
     String NOTICE_CODE="NOTICE_CODE";
+
+    /**
+     * 数据字典编码
+     */
+    String DIC_CODE ="DIC_CODE";
 }
