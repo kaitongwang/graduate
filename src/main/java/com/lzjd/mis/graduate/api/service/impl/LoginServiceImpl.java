@@ -82,12 +82,22 @@ public class LoginServiceImpl implements LoginService {
                    // 验证密码是否相等
                    return HttpResponse.failure("密码错误");
                }else {
-                   HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-                   HttpSession session = request.getSession();
 
-                   session.setAttribute("username",user.getUserName());
-                   session.setAttribute("code",111);
-                   return HttpResponse.success("登录成功");
+                    if("admin".equals(employee.getName())){
+                        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+                        HttpSession session = request.getSession();
+
+                        session.setAttribute("username",employee.getName());
+                        session.setAttribute("code",employee.getCode());
+                       return HttpResponse.success("admin");
+                    }else {
+                        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+                        HttpSession session = request.getSession();
+
+                        session.setAttribute("username",employee.getName());
+                        session.setAttribute("code",employee.getCode());
+                        return HttpResponse.success("employee");
+                    }
                }
             }
 
