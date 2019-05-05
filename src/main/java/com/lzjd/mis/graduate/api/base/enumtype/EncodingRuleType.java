@@ -29,4 +29,9 @@ public interface EncodingRuleType {
      * 数据字典编码
      */
     String DIC_CODE ="DIC_CODE";
+
+    /**
+     * 申请表编码
+     */
+    String APPLY_CODE="APPLY_CODE";
 }

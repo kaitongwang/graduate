@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzjd.mis.graduate.api.dao.mapper.ApplyMapper">
+  <resultMap id="BaseResultMap" type="com.lzjd.mis.graduate.api.domain.pojo.Apply">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="apply_code" jdbcType="VARCHAR" property="applyCode" />
+    <result column="apply_text" jdbcType="VARCHAR" property="applyText" />
+    <result column="apply_user_code" jdbcType="VARCHAR" property="applyUserCode" />
+    <result column="apply_user_name" jdbcType="VARCHAR" property="applyUserName" />
+    <result column="apply_type_code" jdbcType="VARCHAR" property="applyTypeCode" />
+    <result column="apply_type_name" jdbcType="VARCHAR" property="applyTypeName" />
+    <result column="apply_status_code" jdbcType="VARCHAR" property="applyStatusCode" />
+    <result column="apply_satatus_name" jdbcType="VARCHAR" property="applySatatusName" />
+    <result column="apply_time" jdbcType="TIMESTAMP" property="applyTime" />
+    <result column="audit_time" jdbcType="TIMESTAMP" property="auditTime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, apply_code, apply_text, apply_user_code, apply_user_name, apply_type_code, apply_type_name, 
+    apply_status_code, apply_satatus_name, apply_time, audit_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from apply
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from apply
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Apply">
+    insert into apply (id, apply_code, apply_text, 
+      apply_user_code, apply_user_name, apply_type_code, 
+      apply_type_name, apply_status_code, apply_satatus_name, 
+      apply_time, audit_time)
+    values (#{id,jdbcType=BIGINT}, #{applyCode,jdbcType=VARCHAR}, #{applyText,jdbcType=VARCHAR}, 
+      #{applyUserCode,jdbcType=VARCHAR}, #{applyUserName,jdbcType=VARCHAR}, #{applyTypeCode,jdbcType=VARCHAR}, 
+      #{applyTypeName,jdbcType=VARCHAR}, #{applyStatusCode,jdbcType=VARCHAR}, #{applySatatusName,jdbcType=VARCHAR}, 
+      #{applyTime,jdbcType=TIMESTAMP}, #{auditTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Apply">
+    insert into apply
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="applyCode != null">
+        apply_code,
+      </if>
+      <if test="applyText != null">
+        apply_text,
+      </if>
+      <if test="applyUserCode != null">
+        apply_user_code,
+      </if>
+      <if test="applyUserName != null">
+        apply_user_name,
+      </if>
+      <if test="applyTypeCode != null">
+        apply_type_code,
+      </if>
+      <if test="applyTypeName != null">
+        apply_type_name,
+      </if>
+      <if test="applyStatusCode != null">
+        apply_status_code,
+      </if>
+      <if test="applySatatusName != null">
+        apply_satatus_name,
+      </if>
+      <if test="applyTime != null">
+        apply_time,
+      </if>
+      <if test="auditTime != null">
+        audit_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="applyCode != null">
+        #{applyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="applyText != null">
+        #{applyText,jdbcType=VARCHAR},
+      </if>
+      <if test="applyUserCode != null">
+        #{applyUserCode,jdbcType=VARCHAR},
+      </if>
+      <if test="applyUserName != null">
+        #{applyUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="applyTypeCode != null">
+        #{applyTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="applyTypeName != null">
+        #{applyTypeName,jdbcType=VARCHAR},
+      </if>
+      <if test="applyStatusCode != null">
+        #{applyStatusCode,jdbcType=VARCHAR},
+      </if>
+      <if test="applySatatusName != null">
+        #{applySatatusName,jdbcType=VARCHAR},
+      </if>
+      <if test="applyTime != null">
+        #{applyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auditTime != null">
+        #{auditTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Apply">
+    update apply
+    <set>
+      <if test="applyCode != null">
+        apply_code = #{applyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="applyText != null">
+        apply_text = #{applyText,jdbcType=VARCHAR},
+      </if>
+      <if test="applyUserCode != null">
+        apply_user_code = #{applyUserCode,jdbcType=VARCHAR},
+      </if>
+      <if test="applyUserName != null">
+        apply_user_name = #{applyUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="applyTypeCode != null">
+        apply_type_code = #{applyTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="applyTypeName != null">
+        apply_type_name = #{applyTypeName,jdbcType=VARCHAR},
+      </if>
+      <if test="applyStatusCode != null">
+        apply_status_code = #{applyStatusCode,jdbcType=VARCHAR},
+      </if>
+      <if test="applySatatusName != null">
+        apply_satatus_name = #{applySatatusName,jdbcType=VARCHAR},
+      </if>
+      <if test="applyTime != null">
+        apply_time = #{applyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auditTime != null">
+        audit_time = #{auditTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Apply">
+    update apply
+    set apply_code = #{applyCode,jdbcType=VARCHAR},
+      apply_text = #{applyText,jdbcType=VARCHAR},
+      apply_user_code = #{applyUserCode,jdbcType=VARCHAR},
+      apply_user_name = #{applyUserName,jdbcType=VARCHAR},
+      apply_type_code = #{applyTypeCode,jdbcType=VARCHAR},
+      apply_type_name = #{applyTypeName,jdbcType=VARCHAR},
+      apply_status_code = #{applyStatusCode,jdbcType=VARCHAR},
+      apply_satatus_name = #{applySatatusName,jdbcType=VARCHAR},
+      apply_time = #{applyTime,jdbcType=TIMESTAMP},
+      audit_time = #{auditTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="getList" parameterType="com.lzjd.mis.graduate.api.domain.request.ApplyViewReqVo" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from apply
+    where
+    1=1
+    <if test="applyStatusCode != null">
+      apply_status_code = #{applyStatusCode,jdbcType=VARCHAR},
+    </if>
+    <if test="applyUserCode != null">
+      apply_user_code = #{applyUserCode,jdbcType=VARCHAR},
+    </if>
+  </select>
+</mapper>
