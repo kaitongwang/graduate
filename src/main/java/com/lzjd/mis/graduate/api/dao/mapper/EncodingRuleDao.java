@@ -15,4 +15,9 @@ public interface EncodingRuleDao {
 
     EncodingRule getNumberingType(@Param("numberingType") String numberingType);
 
+    /**
+     * 更新订单编码尺度
+     * @return
+     */
+     int updateOderRule();
 }

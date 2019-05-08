@@ -11,35 +11,35 @@ public class Apply {
     @ApiModelProperty("")
     private Long id;
 
-    @ApiModelProperty("ç”³è¯·ç¼–ç �")
+    @ApiModelProperty("申请编码")
     private String applyCode;
 
-    @ApiModelProperty("ç”³è¯·å†…å®¹")
+    @ApiModelProperty("申请内容")
     private String applyText;
 
-    @ApiModelProperty("ç”³è¯·äººç¼–ç �")
+    @ApiModelProperty("申请人编码")
     private String applyUserCode;
 
-    @ApiModelProperty("ç”³è¯·äººå��ç§°")
+    @ApiModelProperty("申请人名称")
     private String applyUserName;
 
-    @ApiModelProperty("ç”³è¯·ç±»åž‹ç¼–ç �")
+    @ApiModelProperty("申请类型编码")
     private String applyTypeCode;
 
-    @ApiModelProperty("ç”³è¯·ç±»åž‹å��ç§°")
+    @ApiModelProperty("申请类型名称")
     private String applyTypeName;
 
-    @ApiModelProperty("ç”³è¯·çŠ¶æ€�ç¼–ç �")
+    @ApiModelProperty("申请状态编码")
     private String applyStatusCode;
 
-    @ApiModelProperty("ç”³è¯·çŠ¶æ€�å��ç§°")
+    @ApiModelProperty("申请状态名称")
     private String applySatatusName;
 
-    @ApiModelProperty("ç”³è¯·æ—¶é—´")
+    @ApiModelProperty("申请时间")
     @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
     private Date applyTime;
 
-    @ApiModelProperty("å®¡æ ¸æ—¶é—´")
+    @ApiModelProperty("审核时间")
     @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
     private Date auditTime;
 

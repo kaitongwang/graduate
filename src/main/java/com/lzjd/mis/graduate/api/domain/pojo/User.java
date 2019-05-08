@@ -14,4 +14,7 @@ public class User {
 
     @ApiModelProperty("用户密码")
     private String password;
+
+    @ApiModelProperty("用户编码")
+    private String userCode;
 }

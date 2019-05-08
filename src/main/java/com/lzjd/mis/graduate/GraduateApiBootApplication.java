@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
@@ -24,6 +25,7 @@ import org.springframework.web.filter.CorsFilter;
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @MapperScan(basePackages = {"com.lzjd.mis.graduate.api.dao.mapper"})
 @EnableAsync(proxyTargetClass = true)//线程异步
+@EnableScheduling// 定时任务
 public class GraduateApiBootApplication {
 
     private static Logger LOGGER = LoggerFactory.getLogger(GraduateApiBootApplication.class);

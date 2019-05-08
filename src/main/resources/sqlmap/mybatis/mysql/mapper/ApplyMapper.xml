@@ -228,10 +228,10 @@
     where
     1=1
     <if test="applyStatusCode != null">
-      apply_status_code = #{applyStatusCode,jdbcType=VARCHAR},
+     and  apply_status_code = #{applyStatusCode,jdbcType=VARCHAR}
     </if>
     <if test="applyUserCode != null">
-      apply_user_code = #{applyUserCode,jdbcType=VARCHAR},
+     and  apply_user_code = #{applyUserCode,jdbcType=VARCHAR}
     </if>
   </select>
 </mapper>

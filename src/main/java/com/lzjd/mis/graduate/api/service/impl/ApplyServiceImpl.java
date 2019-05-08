@@ -26,7 +26,7 @@ import java.util.List;
  * @Since 1.0
  */
 @Service
-public class ApplyServiceImpl  extends BaseServiceImpl implements ApplyService  {
+public class ApplyServiceImpl  implements ApplyService  {
 
     @Autowired
     private EncodingRuleDao encodingRuleDao;
@@ -44,9 +44,6 @@ public class ApplyServiceImpl  extends BaseServiceImpl implements ApplyService  
             // 设置状态编码，名称
           apply.setApplySatatusName("待审核");
           apply.setApplyStatusCode("0");
-          //获取用户名 编码
-            apply.setApplyUserCode(getUserCode());
-            apply.setApplyUserName(getUserName());
             //更新编码尺度
             encodingRuleDao.updateNumberValue(encodingRule.getNumberingValue(),encodingRule.getId());
 
@@ -68,11 +65,10 @@ public class ApplyServiceImpl  extends BaseServiceImpl implements ApplyService  
     @Override
     public HttpResponse getList(ApplyViewReqVo applyViewReqVo) {
         try {
-            if("YG1000".equals(getUserCode())){
+            if("YG1000".equals(applyViewReqVo.getApplyUserCode())){
                 // 如果是管理员
                 applyViewReqVo.setApplyUserCode(null);
             }else {
-                applyViewReqVo.setApplyUserCode(getUserCode());
             }
             PageHelper.startPage(applyViewReqVo.getPageNo(), applyViewReqVo.getPageSize());
             List<Apply> contractResDTOList = applyMapper.getList(applyViewReqVo);

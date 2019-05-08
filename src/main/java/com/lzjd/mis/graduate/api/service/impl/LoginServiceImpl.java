@@ -65,7 +65,8 @@ public class LoginServiceImpl implements LoginService {
                     HttpSession session = request.getSession();
                     session.setAttribute("username",user.getUserName());
                     session.setAttribute("code",customer.getCustomerCode());
-                    return HttpResponse.success("登录成功");
+                    user.setUserCode(customer.getCustomerCode());
+                    return HttpResponse.success(user);
                 }
 
             }else {
@@ -78,7 +79,7 @@ public class LoginServiceImpl implements LoginService {
 
                 }else if(employee.getStatusCode().equals(0)) {
                    return HttpResponse.failure("你已离职无法登录");
-                }else if(!user.getPassword().equals(employee.getName())){
+                }else if(!user.getPassword().equals(employee.getPassword())){
                    // 验证密码是否相等
                    return HttpResponse.failure("密码错误");
                }else {
@@ -89,6 +90,7 @@ public class LoginServiceImpl implements LoginService {
 
                         session.setAttribute("username",employee.getName());
                         session.setAttribute("code",employee.getCode());
+                        user.setUserCode(employee.getCode());
                        return HttpResponse.success("admin");
                     }else {
                         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
@@ -96,7 +98,8 @@ public class LoginServiceImpl implements LoginService {
 
                         session.setAttribute("username",employee.getName());
                         session.setAttribute("code",employee.getCode());
-                        return HttpResponse.success("employee");
+                        user.setUserCode(employee.getCode());;
+                        return HttpResponse.success(user);
                     }
                }
             }
@@ -200,7 +203,7 @@ public class LoginServiceImpl implements LoginService {
             }
             try {
                 System.out.println(InetAddress.getLocalHost());
-                url =  "http://"+InetAddress.getLocalHost().getHostAddress()+":9021/temp-rainy/"+fileName;
+                url =  "http://47.112.27.58:9021/temp-rainy/"+fileName;
             } catch (UnknownHostException e) {
                 e.printStackTrace();
                 return null;

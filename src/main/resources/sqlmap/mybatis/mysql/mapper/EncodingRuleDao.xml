@@ -27,4 +27,11 @@
         <include refid="Base_Column_List" />
         from encoding_rule WHERE numbering_type = #{numberingType,jdbcType=VARCHAR}
     </select>
+
+    <update id="updateOderRule">
+        UPDATE encoding_rule SET numbering_value= 10000
+        WHERE
+        numbering_type = "ODER_CODE"
+    </update>
+
 </mapper>
