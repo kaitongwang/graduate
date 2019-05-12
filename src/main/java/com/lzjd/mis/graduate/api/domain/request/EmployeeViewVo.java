@@ -1,6 +1,8 @@
 package com.lzjd.mis.graduate.api.domain.request;
 import com.lzjd.mis.graduate.api.base.common.PageReq;
 
+
+
 /**
  * @Classname: EmployeeViewVo
  * 描述:
@@ -9,5 +11,5 @@ import com.lzjd.mis.graduate.api.base.common.PageReq;
  * @Version 1.0
  * @Since 1.0
  */
-public class EmployeeViewVo extends PageReq {
+public class EmployeeViewVo extends PageReq  {
 }

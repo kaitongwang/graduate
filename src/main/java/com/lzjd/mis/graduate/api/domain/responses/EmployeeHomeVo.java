@@ -1,6 +1,7 @@
 package com.lzjd.mis.graduate.api.domain.responses;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 /**
  * @Classname: EmployeeHomeVo
@@ -10,6 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
  * @Version 1.0
  * @Since 1.0
  */
+@Data
 public class EmployeeHomeVo {
     @ApiModelProperty("")
     private Long id;

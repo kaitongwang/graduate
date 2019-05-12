@@ -13,19 +13,9 @@
     <result column="picture" jdbcType="VARCHAR" property="picture" />
     <result column="address" jdbcType="VARCHAR" property="address" />
   </resultMap>
- <resultMap id="BaseResultHomeMap" type="com.lzjd.mis.graduate.api.domain.responses.EmployeeHomeVo">
-  <id column="id" jdbcType="BIGINT" property="id" />
-  <result column="code" jdbcType="VARCHAR" property="code" />
-  <result column="name" jdbcType="VARCHAR" property="name" />
-  <result column="password" jdbcType="VARCHAR" property="password" />
-  <result column="sex" jdbcType="TINYINT" property="sex" />
-  <result column="phone" jdbcType="VARCHAR" property="phone" />
-  <result column="status_code" jdbcType="VARCHAR" property="statusCode" />
-  <result column="status_name" jdbcType="VARCHAR" property="statusName" />
-  <result column="picture" jdbcType="VARCHAR" property="picture" />
-  <result column="address" jdbcType="VARCHAR" property="address" />
-   <result column="cost" jdbcType="BIGINT" property="cost" />
-</resultMap>
+
+
+
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -88,6 +78,9 @@
     id, code, name, password, sex, phone, status_code, status_name, picture, address
   </sql>
 
+  <sql id="Base_Column_List1">
+    a.id, a.code, a.name, a.password, a.sex, a.phone, a.status_code, a.status_name, a.picture, a.address,b.cost
+  </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
@@ -252,10 +245,10 @@
     where name != "admin"
   </select>
 
-  <select id="getHomeList" resultMap="BaseResultHomeMap">
+  <select id="getHomeList" resultType="com.lzjd.mis.graduate.api.domain.responses.EmployeeHomeVo">
     select
-    <include refid="Base_Column_List" />
-    from employee
-    where name != "admin"
+    <include refid="Base_Column_List1" />
+    from employee  a left join wage b  on a.code =b.epm_code
+    where a.name != "admin"
   </select>
 </mapper>
