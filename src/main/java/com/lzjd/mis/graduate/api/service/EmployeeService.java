@@ -41,4 +41,10 @@ public interface EmployeeService {
      * @return
      */
     HttpResponse update(Employee employee);
+
+    /**
+     * 获取首页员工信息
+     * @return
+     */
+    HttpResponse getHomeList(EmployeeViewVo employee);
 }

@@ -56,4 +56,12 @@ public class EmployeeController {
     public HttpResponse update(@RequestBody Employee employee){
         return employeeService.update(employee);
     }
+
+
+
+    @PostMapping("/homeList")
+    @ApiOperation("获取首页员工信息")
+    public HttpResponse getHomeList(@RequestBody EmployeeViewVo employee){
+        return employeeService.getHomeList(employee);
+    }
 }

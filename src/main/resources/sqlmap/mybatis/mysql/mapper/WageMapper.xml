@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzjd.mis.graduate.api.dao.mapper.WageMapper">
+  <resultMap id="BaseResultMap" type="com.lzjd.mis.graduate.api.domain.pojo.Wage">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="epm_code" jdbcType="VARCHAR" property="epmCode" />
+    <result column="epm_name" jdbcType="VARCHAR" property="epmName" />
+    <result column="Base_salary" jdbcType="BIGINT" property="baseSalary" />
+    <result column="performance" jdbcType="BIGINT" property="performance" />
+    <result column="cost" jdbcType="BIGINT" property="cost" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, epm_code, epm_name, Base_salary, performance, cost
+  </sql>
+  <select id="selectByExample" parameterType="com.lzjd.mis.graduate.api.domain.pojo.WageExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from wage
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from wage
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from wage
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.lzjd.mis.graduate.api.domain.pojo.WageExample">
+    delete from wage
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Wage">
+    insert into wage (id, epm_code, epm_name, 
+      Base_salary, performance, cost
+      )
+    values (#{id,jdbcType=BIGINT}, #{epmCode,jdbcType=VARCHAR}, #{epmName,jdbcType=VARCHAR}, 
+      #{baseSalary,jdbcType=BIGINT}, #{performance,jdbcType=BIGINT}, #{cost,jdbcType=BIGINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Wage">
+    insert into wage
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="epmCode != null">
+        epm_code,
+      </if>
+      <if test="epmName != null">
+        epm_name,
+      </if>
+      <if test="baseSalary != null">
+        Base_salary,
+      </if>
+      <if test="performance != null">
+        performance,
+      </if>
+      <if test="cost != null">
+        cost,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="epmCode != null">
+        #{epmCode,jdbcType=VARCHAR},
+      </if>
+      <if test="epmName != null">
+        #{epmName,jdbcType=VARCHAR},
+      </if>
+      <if test="baseSalary != null">
+        #{baseSalary,jdbcType=BIGINT},
+      </if>
+      <if test="performance != null">
+        #{performance,jdbcType=BIGINT},
+      </if>
+      <if test="cost != null">
+        #{cost,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.lzjd.mis.graduate.api.domain.pojo.WageExample" resultType="java.lang.Long">
+    select count(*) from wage
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update wage
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.epmCode != null">
+        epm_code = #{record.epmCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.epmName != null">
+        epm_name = #{record.epmName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.baseSalary != null">
+        Base_salary = #{record.baseSalary,jdbcType=BIGINT},
+      </if>
+      <if test="record.performance != null">
+        performance = #{record.performance,jdbcType=BIGINT},
+      </if>
+      <if test="record.cost != null">
+        cost = #{record.cost,jdbcType=BIGINT},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update wage
+    set id = #{record.id,jdbcType=BIGINT},
+      epm_code = #{record.epmCode,jdbcType=VARCHAR},
+      epm_name = #{record.epmName,jdbcType=VARCHAR},
+      Base_salary = #{record.baseSalary,jdbcType=BIGINT},
+      performance = #{record.performance,jdbcType=BIGINT},
+      cost = #{record.cost,jdbcType=BIGINT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Wage">
+    update wage
+    <set>
+      <if test="epmCode != null">
+        epm_code = #{epmCode,jdbcType=VARCHAR},
+      </if>
+      <if test="epmName != null">
+        epm_name = #{epmName,jdbcType=VARCHAR},
+      </if>
+      <if test="baseSalary != null">
+        Base_salary = #{baseSalary,jdbcType=BIGINT},
+      </if>
+      <if test="performance != null">
+        performance = #{performance,jdbcType=BIGINT},
+      </if>
+      <if test="cost != null">
+        cost = #{cost,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Wage">
+    update wage
+    set epm_code = #{epmCode,jdbcType=VARCHAR},
+      epm_name = #{epmName,jdbcType=VARCHAR},
+      Base_salary = #{baseSalary,jdbcType=BIGINT},
+      performance = #{performance,jdbcType=BIGINT},
+      cost = #{cost,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="getList"  resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from wage
+  </select>
+</mapper>

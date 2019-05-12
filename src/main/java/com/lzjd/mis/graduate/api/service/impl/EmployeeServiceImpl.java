@@ -7,9 +7,12 @@ import com.lzjd.mis.graduate.api.base.common.PageUtil;
 import com.lzjd.mis.graduate.api.base.enumtype.EncodingRuleType;
 import com.lzjd.mis.graduate.api.dao.mapper.EmployeeMapper;
 import com.lzjd.mis.graduate.api.dao.mapper.EncodingRuleDao;
+import com.lzjd.mis.graduate.api.dao.mapper.WageMapper;
 import com.lzjd.mis.graduate.api.domain.pojo.Employee;
 import com.lzjd.mis.graduate.api.domain.pojo.EncodingRule;
+import com.lzjd.mis.graduate.api.domain.pojo.Wage;
 import com.lzjd.mis.graduate.api.domain.request.EmployeeViewVo;
+import com.lzjd.mis.graduate.api.domain.responses.EmployeeHomeVo;
 import com.lzjd.mis.graduate.api.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,6 +37,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Autowired
     private EncodingRuleDao encodingRuleDao;
+
+    @Autowired
+    private WageMapper wageMapper;
     /**
      * 添加员工信息
      * @param employee
@@ -61,6 +67,15 @@ public class EmployeeServiceImpl implements EmployeeService {
             //插入客户
             int i = employeeMapper.insertSelective(employee);
 
+
+            //添加工资信息
+            Wage wage =new Wage();
+            wage.setEpmCode(employee.getCode());
+            wage.setEpmName(employee.getName());
+            wage.setBaseSalary(2500L);
+            wage.setCost(10L);
+            wage.setPerformance(8L);
+            wageMapper.insert(wage);
             return HttpResponse.success(i);
         } catch (Exception e) {
             e.printStackTrace();
@@ -114,6 +129,18 @@ public class EmployeeServiceImpl implements EmployeeService {
             return HttpResponse.success(i);
         } catch (Exception ex) {
             return HttpResponse.failure("修改失败");
+        }
+    }
+
+    @Override
+    public HttpResponse getHomeList(EmployeeViewVo employee) {
+        try {
+            PageHelper.startPage(employee.getPageNo(), employee.getPageSize());
+            List<EmployeeHomeVo> contractResDTOList = employeeMapper.getHomeList();
+            BasePage<Employee> basePage = PageUtil.getPageList(employee.getPageSize(),contractResDTOList);
+            return HttpResponse.success(basePage);
+        } catch (Exception ex) {
+            return HttpResponse.failure("查询失败");
         }
     }
 }

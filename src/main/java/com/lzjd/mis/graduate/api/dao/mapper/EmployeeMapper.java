@@ -1,6 +1,7 @@
 package com.lzjd.mis.graduate.api.dao.mapper;
 
 import com.lzjd.mis.graduate.api.domain.pojo.Employee;
+import com.lzjd.mis.graduate.api.domain.responses.EmployeeHomeVo;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -30,4 +31,8 @@ public interface EmployeeMapper {
     Integer checkName(@Param("name")String name, @Param("id")Long id);
 
     List<Employee> getEmployeelist();
+
+
+
+    List<EmployeeHomeVo>getHomeList();
 }
