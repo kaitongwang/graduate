@@ -98,7 +98,7 @@ public class LoginServiceImpl implements LoginService {
 
                         session.setAttribute("username",employee.getName());
                         session.setAttribute("code",employee.getCode());
-                        user.setUserCode(employee.getCode());;
+                        user.setUserCode(employee.getCode());
                         return HttpResponse.success(user);
                     }
                }
