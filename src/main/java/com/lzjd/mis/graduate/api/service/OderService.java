@@ -23,4 +23,9 @@ public interface OderService {
 
 
     HttpResponse list(QueryOderReqVo queryOderReqVo);
+
+       HttpResponse view(long id);
+
+
+      HttpResponse update(Oder oder);
 }

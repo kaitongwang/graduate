@@ -74,4 +74,26 @@ public class OderServiceImpl implements OderService {
             return HttpResponse.failure("查询失败");
         }
     }
+
+    @Override
+    public HttpResponse view(long id) {
+        try {
+            Oder oder = oderMapper.selectByPrimaryKey(id);
+            return HttpResponse.success(oder);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return HttpResponse.failure("查询失败");
+        }
+    }
+
+    @Override
+    public HttpResponse update(Oder oder) {
+        try {
+            int  i = oderMapper.updateByPrimaryKeySelective(oder);
+            return HttpResponse.success(i);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return HttpResponse.failure("更新失败");
+        }
+    }
 }
