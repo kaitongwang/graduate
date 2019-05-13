@@ -34,4 +34,9 @@ public interface EncodingRuleType {
      * 申请表编码
      */
     String APPLY_CODE="APPLY_CODE";
+
+    /**
+     * 订单编码
+     */
+    String ODER_CODE="ODER_CODE";
 }

@@ -2,6 +2,7 @@ package com.lzjd.mis.graduate.api.dao.mapper;
 
 import com.lzjd.mis.graduate.api.domain.pojo.Oder;
 import com.lzjd.mis.graduate.api.domain.pojo.OderExample;
+import com.lzjd.mis.graduate.api.domain.request.QueryOderReqVo;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -28,4 +29,12 @@ public interface OderMapper {
     int updateByPrimaryKeySelective(Oder record);
 
     int updateByPrimaryKey(Oder record);
+
+
+    /**
+     * 分页查询
+     * @param queryOderReqVo
+     * @return
+     */
+    List<Oder> getList( QueryOderReqVo queryOderReqVo);
 }

@@ -4,6 +4,8 @@
   <resultMap id="BaseResultMap" type="com.lzjd.mis.graduate.api.domain.pojo.Oder">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="status_code" jdbcType="VARCHAR" property="statusCode" />
+    <result column="status_name" jdbcType="VARCHAR" property="statusName" />
     <result column="start_date" jdbcType="TIMESTAMP" property="startDate" />
     <result column="time" jdbcType="BIGINT" property="time" />
     <result column="service_code" jdbcType="VARCHAR" property="serviceCode" />
@@ -76,8 +78,9 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, code, start_date, time, service_code, service_name, customer_code, customer_name, 
-    employee_code, employee_name, address, price, cost, text
+    id, code, status_code, status_name, start_date, time, service_code, service_name, 
+    customer_code, customer_name, employee_code, employee_name, address, price, cost, 
+    text
   </sql>
   <select id="selectByExample" parameterType="com.lzjd.mis.graduate.api.domain.pojo.OderExample" resultMap="BaseResultMap">
     select
@@ -110,16 +113,18 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Oder">
-    insert into oder (id, code, start_date, 
-      time, service_code, service_name, 
-      customer_code, customer_name, employee_code, 
-      employee_name, address, price, 
-      cost, text)
-    values (#{id,jdbcType=BIGINT}, #{code,jdbcType=VARCHAR}, #{startDate,jdbcType=TIMESTAMP}, 
-      #{time,jdbcType=BIGINT}, #{serviceCode,jdbcType=VARCHAR}, #{serviceName,jdbcType=VARCHAR}, 
-      #{customerCode,jdbcType=VARCHAR}, #{customerName,jdbcType=VARCHAR}, #{employeeCode,jdbcType=VARCHAR}, 
-      #{employeeName,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{price,jdbcType=BIGINT}, 
-      #{cost,jdbcType=BIGINT}, #{text,jdbcType=VARCHAR})
+    insert into oder (id, code, status_code, 
+      status_name, start_date, time, 
+      service_code, service_name, customer_code, 
+      customer_name, employee_code, employee_name, 
+      address, price, cost, 
+      text)
+    values (#{id,jdbcType=BIGINT}, #{code,jdbcType=VARCHAR}, #{statusCode,jdbcType=VARCHAR}, 
+      #{statusName,jdbcType=VARCHAR}, #{startDate,jdbcType=TIMESTAMP}, #{time,jdbcType=BIGINT}, 
+      #{serviceCode,jdbcType=VARCHAR}, #{serviceName,jdbcType=VARCHAR}, #{customerCode,jdbcType=VARCHAR}, 
+      #{customerName,jdbcType=VARCHAR}, #{employeeCode,jdbcType=VARCHAR}, #{employeeName,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{price,jdbcType=BIGINT}, #{cost,jdbcType=BIGINT}, 
+      #{text,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Oder">
     insert into oder
@@ -129,6 +134,12 @@
       </if>
       <if test="code != null">
         code,
+      </if>
+      <if test="statusCode != null">
+        status_code,
+      </if>
+      <if test="statusName != null">
+        status_name,
       </if>
       <if test="startDate != null">
         start_date,
@@ -173,6 +184,12 @@
       </if>
       <if test="code != null">
         #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="statusCode != null">
+        #{statusCode,jdbcType=VARCHAR},
+      </if>
+      <if test="statusName != null">
+        #{statusName,jdbcType=VARCHAR},
       </if>
       <if test="startDate != null">
         #{startDate,jdbcType=TIMESTAMP},
@@ -227,6 +244,12 @@
       <if test="record.code != null">
         code = #{record.code,jdbcType=VARCHAR},
       </if>
+      <if test="record.statusCode != null">
+        status_code = #{record.statusCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.statusName != null">
+        status_name = #{record.statusName,jdbcType=VARCHAR},
+      </if>
       <if test="record.startDate != null">
         start_date = #{record.startDate,jdbcType=TIMESTAMP},
       </if>
@@ -272,6 +295,8 @@
     update oder
     set id = #{record.id,jdbcType=BIGINT},
       code = #{record.code,jdbcType=VARCHAR},
+      status_code = #{record.statusCode,jdbcType=VARCHAR},
+      status_name = #{record.statusName,jdbcType=VARCHAR},
       start_date = #{record.startDate,jdbcType=TIMESTAMP},
       time = #{record.time,jdbcType=BIGINT},
       service_code = #{record.serviceCode,jdbcType=VARCHAR},
@@ -293,6 +318,12 @@
     <set>
       <if test="code != null">
         code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="statusCode != null">
+        status_code = #{statusCode,jdbcType=VARCHAR},
+      </if>
+      <if test="statusName != null">
+        status_name = #{statusName,jdbcType=VARCHAR},
       </if>
       <if test="startDate != null">
         start_date = #{startDate,jdbcType=TIMESTAMP},
@@ -336,6 +367,8 @@
   <update id="updateByPrimaryKey" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Oder">
     update oder
     set code = #{code,jdbcType=VARCHAR},
+      status_code = #{statusCode,jdbcType=VARCHAR},
+      status_name = #{statusName,jdbcType=VARCHAR},
       start_date = #{startDate,jdbcType=TIMESTAMP},
       time = #{time,jdbcType=BIGINT},
       service_code = #{serviceCode,jdbcType=VARCHAR},
@@ -350,4 +383,21 @@
       text = #{text,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
+
+  <select id="getList" parameterType="com.lzjd.mis.graduate.api.domain.request.QueryOderReqVo" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from oder
+    where 1=1
+    <if test="statusCode != null and statusCode!=''">
+     and status_code = #{statusCode,jdbcType=VARCHAR}
+    </if>
+    <if test="customerCode != null and customerCode!=''">
+    and  customer_code = #{customerCode,jdbcType=VARCHAR}
+    </if>
+    <if test="employeeCode != null and employeeCode!=''">
+    and  employee_code = #{employeeCode,jdbcType=VARCHAR}
+    </if>
+    order by id desc
+  </select>
 </mapper>

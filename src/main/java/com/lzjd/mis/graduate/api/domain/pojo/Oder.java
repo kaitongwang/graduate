@@ -16,6 +16,13 @@ public class Oder {
     @ApiModelProperty("编码")
     private String code;
 
+
+    @ApiModelProperty("状态编码")
+    private String statusCode;
+
+    @ApiModelProperty("状态名称")
+    private String statusName;
+
     @ApiModelProperty("开始时间")
     @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
     private Date startDate;
