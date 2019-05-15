@@ -31,4 +31,7 @@ public interface CustomerMapper {
 
     Customer selectByName(String name);
 
+
+    Customer selectByCode(String code);
+
 }

@@ -184,4 +184,11 @@
     from customer
     where customer_name = #{name,jdbcType=VARCHAR}
   </select>
+
+  <select id="selectByCode" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from customer
+    where customer_code = #{code,jdbcType=VARCHAR}
+  </select>
 </mapper>
