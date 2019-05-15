@@ -2,14 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lzjd.mis.graduate.api.dao.mapper.CommentsMapper">
   <resultMap id="BaseResultMap" type="com.lzjd.mis.graduate.api.domain.pojo.Comments">
-    <id column="score_code" jdbcType="VARCHAR" property="scoreCode" />
-    <result column="id" jdbcType="BIGINT" property="id" />
+    <id column="id" jdbcType="BIGINT" property="id" />
     <result column="code" jdbcType="VARCHAR" property="code" />
     <result column="oder_code" jdbcType="VARCHAR" property="oderCode" />
     <result column="customer_code" jdbcType="VARCHAR" property="customerCode" />
     <result column="employees_code" jdbcType="VARCHAR" property="employeesCode" />
     <result column="text" jdbcType="VARCHAR" property="text" />
     <result column="picture" jdbcType="VARCHAR" property="picture" />
+    <result column="score_code" jdbcType="VARCHAR" property="scoreCode" />
     <result column="score_name" jdbcType="VARCHAR" property="scoreName" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -71,7 +71,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    score_code, id, code, oder_code, customer_code, employees_code, text, picture, score_name
+    id, code, oder_code, customer_code, employees_code, text, picture, score_code, score_name
   </sql>
   <select id="selectByExample" parameterType="com.lzjd.mis.graduate.api.domain.pojo.CommentsExample" resultMap="BaseResultMap">
     select
@@ -87,15 +87,15 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from comments
-    where score_code = #{scoreCode,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from comments
-    where score_code = #{scoreCode,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
   </delete>
   <delete id="deleteByExample" parameterType="com.lzjd.mis.graduate.api.domain.pojo.CommentsExample">
     delete from comments
@@ -104,21 +104,18 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Comments">
-    insert into comments (score_code, id, code, 
-      oder_code, customer_code, employees_code, 
-      text, picture, score_name
+    insert into comments (id, code, oder_code, 
+      customer_code, employees_code, text, 
+      picture, score_code, score_name
       )
-    values (#{scoreCode,jdbcType=VARCHAR}, #{id,jdbcType=BIGINT}, #{code,jdbcType=VARCHAR}, 
-      #{oderCode,jdbcType=VARCHAR}, #{customerCode,jdbcType=VARCHAR}, #{employeesCode,jdbcType=VARCHAR}, 
-      #{text,jdbcType=VARCHAR}, #{picture,jdbcType=VARCHAR}, #{scoreName,jdbcType=VARCHAR}
+    values (#{id,jdbcType=BIGINT}, #{code,jdbcType=VARCHAR}, #{oderCode,jdbcType=VARCHAR}, 
+      #{customerCode,jdbcType=VARCHAR}, #{employeesCode,jdbcType=VARCHAR}, #{text,jdbcType=VARCHAR}, 
+      #{picture,jdbcType=VARCHAR}, #{scoreCode,jdbcType=VARCHAR}, #{scoreName,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Comments">
     insert into comments
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="scoreCode != null">
-        score_code,
-      </if>
       <if test="id != null">
         id,
       </if>
@@ -140,14 +137,14 @@
       <if test="picture != null">
         picture,
       </if>
+      <if test="scoreCode != null">
+        score_code,
+      </if>
       <if test="scoreName != null">
         score_name,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="scoreCode != null">
-        #{scoreCode,jdbcType=VARCHAR},
-      </if>
       <if test="id != null">
         #{id,jdbcType=BIGINT},
       </if>
@@ -169,6 +166,9 @@
       <if test="picture != null">
         #{picture,jdbcType=VARCHAR},
       </if>
+      <if test="scoreCode != null">
+        #{scoreCode,jdbcType=VARCHAR},
+      </if>
       <if test="scoreName != null">
         #{scoreName,jdbcType=VARCHAR},
       </if>
@@ -183,9 +183,6 @@
   <update id="updateByExampleSelective" parameterType="map">
     update comments
     <set>
-      <if test="record.scoreCode != null">
-        score_code = #{record.scoreCode,jdbcType=VARCHAR},
-      </if>
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
@@ -207,6 +204,9 @@
       <if test="record.picture != null">
         picture = #{record.picture,jdbcType=VARCHAR},
       </if>
+      <if test="record.scoreCode != null">
+        score_code = #{record.scoreCode,jdbcType=VARCHAR},
+      </if>
       <if test="record.scoreName != null">
         score_name = #{record.scoreName,jdbcType=VARCHAR},
       </if>
@@ -217,14 +217,14 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update comments
-    set score_code = #{record.scoreCode,jdbcType=VARCHAR},
-      id = #{record.id,jdbcType=BIGINT},
+    set id = #{record.id,jdbcType=BIGINT},
       code = #{record.code,jdbcType=VARCHAR},
       oder_code = #{record.oderCode,jdbcType=VARCHAR},
       customer_code = #{record.customerCode,jdbcType=VARCHAR},
       employees_code = #{record.employeesCode,jdbcType=VARCHAR},
       text = #{record.text,jdbcType=VARCHAR},
       picture = #{record.picture,jdbcType=VARCHAR},
+      score_code = #{record.scoreCode,jdbcType=VARCHAR},
       score_name = #{record.scoreName,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -233,9 +233,6 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Comments">
     update comments
     <set>
-      <if test="id != null">
-        id = #{id,jdbcType=BIGINT},
-      </if>
       <if test="code != null">
         code = #{code,jdbcType=VARCHAR},
       </if>
@@ -254,22 +251,41 @@
       <if test="picture != null">
         picture = #{picture,jdbcType=VARCHAR},
       </if>
+      <if test="scoreCode != null">
+        score_code = #{scoreCode,jdbcType=VARCHAR},
+      </if>
       <if test="scoreName != null">
         score_name = #{scoreName,jdbcType=VARCHAR},
       </if>
     </set>
-    where score_code = #{scoreCode,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Comments">
     update comments
-    set id = #{id,jdbcType=BIGINT},
-      code = #{code,jdbcType=VARCHAR},
+    set code = #{code,jdbcType=VARCHAR},
       oder_code = #{oderCode,jdbcType=VARCHAR},
       customer_code = #{customerCode,jdbcType=VARCHAR},
       employees_code = #{employeesCode,jdbcType=VARCHAR},
       text = #{text,jdbcType=VARCHAR},
       picture = #{picture,jdbcType=VARCHAR},
+      score_code = #{scoreCode,jdbcType=VARCHAR},
       score_name = #{scoreName,jdbcType=VARCHAR}
-    where score_code = #{scoreCode,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
   </update>
+
+  <select id="getList" parameterType="com.lzjd.mis.graduate.api.domain.request.CommentsViewReqVo" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from comments
+    where  1=1
+    <if test="oderCode != null">
+     and oder_code = #{oderCode,jdbcType=VARCHAR}
+    </if>
+    <if test="customerCode != null">
+      and   customer_code = #{customerCode,jdbcType=VARCHAR}
+    </if>
+    <if test="employeesCode != null">
+      and employees_code = #{employeesCode,jdbcType=VARCHAR}
+    </if>
+  </select>
 </mapper>

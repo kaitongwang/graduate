@@ -104,76 +104,6 @@ public class CommentsExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andScoreCodeIsNull() {
-            addCriterion("score_code is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreCodeIsNotNull() {
-            addCriterion("score_code is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreCodeEqualTo(String value) {
-            addCriterion("score_code =", value, "scoreCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreCodeNotEqualTo(String value) {
-            addCriterion("score_code <>", value, "scoreCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreCodeGreaterThan(String value) {
-            addCriterion("score_code >", value, "scoreCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreCodeGreaterThanOrEqualTo(String value) {
-            addCriterion("score_code >=", value, "scoreCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreCodeLessThan(String value) {
-            addCriterion("score_code <", value, "scoreCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreCodeLessThanOrEqualTo(String value) {
-            addCriterion("score_code <=", value, "scoreCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreCodeLike(String value) {
-            addCriterion("score_code like", value, "scoreCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreCodeNotLike(String value) {
-            addCriterion("score_code not like", value, "scoreCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreCodeIn(List<String> values) {
-            addCriterion("score_code in", values, "scoreCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreCodeNotIn(List<String> values) {
-            addCriterion("score_code not in", values, "scoreCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreCodeBetween(String value1, String value2) {
-            addCriterion("score_code between", value1, value2, "scoreCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andScoreCodeNotBetween(String value1, String value2) {
-            addCriterion("score_code not between", value1, value2, "scoreCode");
-            return (Criteria) this;
-        }
-
         public Criteria andIdIsNull() {
             addCriterion("id is null");
             return (Criteria) this;
@@ -651,6 +581,76 @@ public class CommentsExample {
 
         public Criteria andPictureNotBetween(String value1, String value2) {
             addCriterion("picture not between", value1, value2, "picture");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreCodeIsNull() {
+            addCriterion("score_code is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreCodeIsNotNull() {
+            addCriterion("score_code is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreCodeEqualTo(String value) {
+            addCriterion("score_code =", value, "scoreCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreCodeNotEqualTo(String value) {
+            addCriterion("score_code <>", value, "scoreCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreCodeGreaterThan(String value) {
+            addCriterion("score_code >", value, "scoreCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreCodeGreaterThanOrEqualTo(String value) {
+            addCriterion("score_code >=", value, "scoreCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreCodeLessThan(String value) {
+            addCriterion("score_code <", value, "scoreCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreCodeLessThanOrEqualTo(String value) {
+            addCriterion("score_code <=", value, "scoreCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreCodeLike(String value) {
+            addCriterion("score_code like", value, "scoreCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreCodeNotLike(String value) {
+            addCriterion("score_code not like", value, "scoreCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreCodeIn(List<String> values) {
+            addCriterion("score_code in", values, "scoreCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreCodeNotIn(List<String> values) {
+            addCriterion("score_code not in", values, "scoreCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreCodeBetween(String value1, String value2) {
+            addCriterion("score_code between", value1, value2, "scoreCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreCodeNotBetween(String value1, String value2) {
+            addCriterion("score_code not between", value1, value2, "scoreCode");
             return (Criteria) this;
         }
 

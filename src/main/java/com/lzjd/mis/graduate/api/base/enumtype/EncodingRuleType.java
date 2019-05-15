@@ -39,4 +39,11 @@ public interface EncodingRuleType {
      * 订单编码
      */
     String ODER_CODE="ODER_CODE";
+
+
+    /**
+     * 评论编码
+     */
+
+    String COMMENTS_CODE ="COMMENTS_CODE";
 }
