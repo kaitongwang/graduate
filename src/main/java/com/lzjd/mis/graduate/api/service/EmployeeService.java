@@ -47,4 +47,12 @@ public interface EmployeeService {
      * @return
      */
     HttpResponse getHomeList(EmployeeViewVo employee);
+
+
+    /**
+     * 通过编码获取员工详情
+     * @param code
+     * @return
+     */
+    HttpResponse viewByCode(String code);
 }

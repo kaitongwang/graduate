@@ -251,4 +251,11 @@
     from employee  a left join wage b  on a.code =b.epm_code
     where a.name != "admin"
   </select>
+
+  <select id="selectByCode" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from employee
+    where code = #{code,jdbcType=VARCHAR}
+  </select>
 </mapper>

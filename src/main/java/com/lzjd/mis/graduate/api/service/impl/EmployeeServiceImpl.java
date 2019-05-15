@@ -143,4 +143,14 @@ public class EmployeeServiceImpl implements EmployeeService {
             return HttpResponse.failure("查询失败");
         }
     }
+
+    @Override
+    public HttpResponse viewByCode(String code) {
+        try {
+            Employee employee =employeeMapper.selectByCode(code);
+            return HttpResponse.success(employee);
+        } catch (Exception ex) {
+            return HttpResponse.failure("查询失败");
+        }
+    }
 }

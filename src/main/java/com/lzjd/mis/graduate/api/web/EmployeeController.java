@@ -64,4 +64,11 @@ public class EmployeeController {
     public HttpResponse getHomeList(@RequestBody EmployeeViewVo employee){
         return employeeService.getHomeList(employee);
     }
+
+
+    @GetMapping("/viewByCode")
+    @ApiOperation("获取员工信息")
+    public HttpResponse viewByCode(@RequestParam (value = "code") String  code){
+        return employeeService.viewByCode(code);
+    }
 }

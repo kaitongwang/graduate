@@ -35,4 +35,7 @@ public interface EmployeeMapper {
 
 
     List<EmployeeHomeVo>getHomeList();
+
+
+    Employee selectByCode(String code);
 }
