@@ -13,7 +13,7 @@ public interface CorrelationMapper {
 
     int deleteByPrimaryKey(Integer id);
 
-    int insert(Correlation record);
+    int insert(List<Correlation> list);
 
     int insertSelective(Correlation record);
 
@@ -28,4 +28,10 @@ public interface CorrelationMapper {
     int updateByPrimaryKeySelective(Correlation record);
 
     int updateByPrimaryKey(Correlation record);
+
+
+    List<Correlation> getList( @Param("employeeCode") String employeeCode);
+
+
+    int deleteByCode(@Param("employeeCode") String employeeCode);
 }

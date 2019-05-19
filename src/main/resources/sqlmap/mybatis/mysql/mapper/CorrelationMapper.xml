@@ -86,7 +86,7 @@
     </if>
   </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
+    select
     <include refid="Base_Column_List" />
     from correlation
     where id = #{id,jdbcType=INTEGER}
@@ -101,13 +101,22 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Correlation">
+  <insert id="insert" parameterType="java.util.List">
     insert into correlation (id, employee_code, employee_name, 
       service_code, service_name, virtue, 
       status)
-    values (#{id,jdbcType=INTEGER}, #{employeeCode,jdbcType=VARCHAR}, #{employeeName,jdbcType=VARCHAR}, 
-      #{serviceCode,jdbcType=VARCHAR}, #{serviceName,jdbcType=VARCHAR}, #{virtue,jdbcType=VARCHAR}, 
-      #{status,jdbcType=TINYINT})
+    values
+    <foreach collection="list" item="t" index= "index" separator =",">(
+      #{t.id,jdbcType=INTEGER},
+      #{
+      t.employeeCode,jdbcType=VARCHAR},
+      #{t.employeeName,jdbcType=VARCHAR},
+      #{t.serviceCode,jdbcType=VARCHAR},
+      #{t.serviceName,jdbcType=VARCHAR},
+      #{t.virtue,jdbcType=VARCHAR},
+      #{t.status,jdbcType=TINYINT}
+      )
+    </foreach>
   </insert>
   <insert id="insertSelective" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Correlation">
     insert into correlation
@@ -240,4 +249,15 @@
       status = #{status,jdbcType=TINYINT}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="getList" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from correlation
+    where employee_code = #{employeeCode,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="deleteByCode" parameterType="java.lang.String">
+    delete from correlation
+    where employee_code = #{employeeCode,jdbcType=VARCHAR}
+  </delete>
 </mapper>

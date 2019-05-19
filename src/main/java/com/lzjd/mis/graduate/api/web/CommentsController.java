@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Version 1.0
  * @Since 1.0
  */
-@RequestMapping
+@RequestMapping("/comments")
 @RestController
 @Api(description = "评论控制器")
 public class CommentsController {
