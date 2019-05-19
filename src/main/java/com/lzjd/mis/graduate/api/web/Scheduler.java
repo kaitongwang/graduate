@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.logging.Logger;
 
@@ -30,8 +31,9 @@ public class Scheduler {
         schedulerService.updateOderRule();
     }
 
-//    @Scheduled(cron="0 0/1 * * * ?")
+//
+//    @Scheduled(cron = "0 0 0 0 1-12 ?")
 //    public void test(){
-//        System.out.println("------定时任务-------");
+//        System.out.println("------每月生成工资条-------");
 //    }
 }

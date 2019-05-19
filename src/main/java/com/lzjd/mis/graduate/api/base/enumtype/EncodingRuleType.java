@@ -46,4 +46,10 @@ public interface EncodingRuleType {
      */
 
     String COMMENTS_CODE ="COMMENTS_CODE";
+
+
+    /**
+     * 服务类型编码
+     */
+    String SERVICE_CODE ="SERVICE_CODE";
 }

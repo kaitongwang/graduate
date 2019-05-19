@@ -27,8 +27,12 @@ public class Oder {
     @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
     private Date startDate;
 
-    @ApiModelProperty("用时")
+    @ApiModelProperty("次数")
     private Long time;
+
+
+    @ApiModelProperty("单位")
+    private String unit;
 
     @ApiModelProperty("服务编码")
     private String serviceCode;
