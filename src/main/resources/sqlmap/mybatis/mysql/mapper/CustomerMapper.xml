@@ -191,4 +191,9 @@
     from customer
     where customer_code = #{code,jdbcType=VARCHAR}
   </select>
+  <select id="getList"  resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from customer
+  </select>
 </mapper>

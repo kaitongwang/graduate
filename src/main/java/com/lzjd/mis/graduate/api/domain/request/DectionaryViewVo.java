@@ -1,6 +1,6 @@
 package com.lzjd.mis.graduate.api.domain.request;
 
-import com.lzjd.mis.graduate.api.base.common.PageReq;
+         import com.lzjd.mis.graduate.api.base.common.PageReq;
 
 /**
  * @Classname: DectionaryViewVo

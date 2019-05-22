@@ -4,7 +4,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
- * @Classname: EmployeeHomeVo
+ * @Classname: EmployeeHomeReqVo
  * 描述:
  * @Author: Kt.w
  * @Date: 2019/5/12
@@ -44,5 +44,5 @@ public class EmployeeHomeVo {
     private String picture;
 
     @ApiModelProperty("每小时费用")
-    private Long cost;
+    private String virtue;
 }

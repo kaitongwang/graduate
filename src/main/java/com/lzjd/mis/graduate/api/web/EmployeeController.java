@@ -2,6 +2,7 @@ package com.lzjd.mis.graduate.api.web;
 
 import com.lzjd.mis.graduate.api.base.common.HttpResponse;
 import com.lzjd.mis.graduate.api.domain.pojo.Employee;
+import com.lzjd.mis.graduate.api.domain.request.EmployeeHomeReqVo;
 import com.lzjd.mis.graduate.api.domain.request.EmployeeViewVo;
 import com.lzjd.mis.graduate.api.service.EmployeeService;
 import io.swagger.annotations.Api;
@@ -61,7 +62,7 @@ public class EmployeeController {
 
     @PostMapping("/homeList")
     @ApiOperation("获取首页员工信息")
-    public HttpResponse getHomeList(@RequestBody EmployeeViewVo employee){
+    public HttpResponse getHomeList(@RequestBody EmployeeHomeReqVo employee){
         return employeeService.getHomeList(employee);
     }
 

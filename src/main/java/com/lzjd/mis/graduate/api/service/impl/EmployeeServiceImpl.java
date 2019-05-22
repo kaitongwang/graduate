@@ -8,9 +8,11 @@ import com.lzjd.mis.graduate.api.base.enumtype.EncodingRuleType;
 import com.lzjd.mis.graduate.api.dao.mapper.EmployeeMapper;
 import com.lzjd.mis.graduate.api.dao.mapper.EncodingRuleDao;
 import com.lzjd.mis.graduate.api.dao.mapper.WageMapper;
+import com.lzjd.mis.graduate.api.domain.pojo.Customer;
 import com.lzjd.mis.graduate.api.domain.pojo.Employee;
 import com.lzjd.mis.graduate.api.domain.pojo.EncodingRule;
 import com.lzjd.mis.graduate.api.domain.pojo.Wage;
+import com.lzjd.mis.graduate.api.domain.request.EmployeeHomeReqVo;
 import com.lzjd.mis.graduate.api.domain.request.EmployeeViewVo;
 import com.lzjd.mis.graduate.api.domain.responses.EmployeeHomeVo;
 import com.lzjd.mis.graduate.api.service.EmployeeService;
@@ -133,10 +135,10 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public HttpResponse getHomeList(EmployeeViewVo employee) {
+    public HttpResponse getHomeList(EmployeeHomeReqVo employee) {
         try {
             PageHelper.startPage(employee.getPageNo(), employee.getPageSize());
-            List<EmployeeHomeVo> contractResDTOList = employeeMapper.getHomeList();
+            List<EmployeeHomeVo> contractResDTOList = employeeMapper.getHomeList(employee.getServiceCode());
             BasePage<EmployeeHomeVo> basePage = PageUtil.getPageList(employee.getPageSize(),contractResDTOList);
             return HttpResponse.success(basePage);
         } catch (Exception ex) {
@@ -153,4 +155,5 @@ public class EmployeeServiceImpl implements EmployeeService {
             return HttpResponse.failure("查询失败");
         }
     }
+
 }

@@ -1,8 +1,11 @@
 package com.lzjd.mis.graduate.api.service;
 
 import com.lzjd.mis.graduate.api.base.common.HttpResponse;
+import com.lzjd.mis.graduate.api.domain.pojo.Customer;
 import com.lzjd.mis.graduate.api.domain.pojo.Employee;
+import com.lzjd.mis.graduate.api.domain.request.EmployeeHomeReqVo;
 import com.lzjd.mis.graduate.api.domain.request.EmployeeViewVo;
+import org.springframework.web.bind.annotation.RequestBody;
 
 /**
  * @Classname: EmployeeService
@@ -46,7 +49,7 @@ public interface EmployeeService {
      * 获取首页员工信息
      * @return
      */
-    HttpResponse getHomeList(EmployeeViewVo employee);
+    HttpResponse getHomeList(EmployeeHomeReqVo employee);
 
 
     /**
@@ -55,4 +58,7 @@ public interface EmployeeService {
      * @return
      */
     HttpResponse viewByCode(String code);
+
+
+
 }

@@ -34,7 +34,7 @@ public interface EmployeeMapper {
 
 
 
-    List<EmployeeHomeVo>getHomeList();
+    List<EmployeeHomeVo> getHomeList( @Param("serviceCode") String serviceCode);
 
 
     Employee selectByCode(String code);

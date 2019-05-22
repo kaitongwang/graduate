@@ -2,6 +2,7 @@ package com.lzjd.mis.graduate.api.service;
 
 import com.lzjd.mis.graduate.api.base.common.HttpResponse;
 import com.lzjd.mis.graduate.api.domain.pojo.Customer;
+import com.lzjd.mis.graduate.api.domain.request.CustomerReqVo;
 
 /**
  * @Classname: CustomerService
@@ -22,4 +23,16 @@ public interface CustomerService {
 
 
     HttpResponse update(Customer customer);
+
+    /**
+     * 添加客户信息
+     * @param customer
+     * @return
+     */
+    HttpResponse add( Customer customer);
+
+    HttpResponse delete(Integer id);
+
+    HttpResponse getList(CustomerReqVo customerReqVo);
+
 }

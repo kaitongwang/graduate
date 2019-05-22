@@ -34,4 +34,6 @@ public interface CustomerMapper {
 
     Customer selectByCode(String code);
 
+    List<Customer> getList();
+
 }
