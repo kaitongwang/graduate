@@ -14,6 +14,9 @@ public class Correlation {
     @ApiModelProperty("雇员名称")
     private String employeeName;
 
+    @ApiModelProperty("父级服务编码")
+    private String code;
+
     @ApiModelProperty("服务编码")
     private String serviceCode;
 
@@ -80,5 +83,13 @@ public class Correlation {
 
     public void setStatus(Byte status) {
         this.status = status;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 }

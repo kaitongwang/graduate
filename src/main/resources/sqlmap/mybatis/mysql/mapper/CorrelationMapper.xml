@@ -3,6 +3,7 @@
 <mapper namespace="com.lzjd.mis.graduate.api.dao.mapper.CorrelationMapper">
   <resultMap id="BaseResultMap" type="com.lzjd.mis.graduate.api.domain.pojo.Correlation">
     <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
     <result column="employee_code" jdbcType="VARCHAR" property="employeeCode" />
     <result column="employee_name" jdbcType="VARCHAR" property="employeeName" />
     <result column="service_code" jdbcType="VARCHAR" property="serviceCode" />
@@ -69,7 +70,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, employee_code, employee_name, service_code, service_name, virtue, status
+    id, code, employee_code, employee_name, service_code, service_name, virtue, status
   </sql>
   <select id="selectByExample" parameterType="com.lzjd.mis.graduate.api.domain.pojo.CorrelationExample" resultMap="BaseResultMap">
     select
@@ -101,28 +102,22 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="java.util.List">
-    insert into correlation (id, employee_code, employee_name, 
-      service_code, service_name, virtue, 
-      status)
-    values
-    <foreach collection="list" item="t" index= "index" separator =",">(
-      #{t.id,jdbcType=INTEGER},
-      #{
-      t.employeeCode,jdbcType=VARCHAR},
-      #{t.employeeName,jdbcType=VARCHAR},
-      #{t.serviceCode,jdbcType=VARCHAR},
-      #{t.serviceName,jdbcType=VARCHAR},
-      #{t.virtue,jdbcType=VARCHAR},
-      #{t.status,jdbcType=TINYINT}
-      )
-    </foreach>
+  <insert id="insert" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Correlation">
+    insert into correlation (id, code, employee_code,
+      employee_name, service_code, service_name,
+      virtue, status)
+    values (#{id,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{employeeCode,jdbcType=VARCHAR},
+      #{employeeName,jdbcType=VARCHAR}, #{serviceCode,jdbcType=VARCHAR}, #{serviceName,jdbcType=VARCHAR},
+      #{virtue,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT})
   </insert>
   <insert id="insertSelective" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Correlation">
     insert into correlation
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
+      </if>
+      <if test="code != null">
+        code,
       </if>
       <if test="employeeCode != null">
         employee_code,
@@ -146,6 +141,9 @@
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
         #{id,jdbcType=INTEGER},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
       </if>
       <if test="employeeCode != null">
         #{employeeCode,jdbcType=VARCHAR},
@@ -179,6 +177,9 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=INTEGER},
       </if>
+      <if test="record.code != null">
+        code = #{record.code,jdbcType=VARCHAR},
+      </if>
       <if test="record.employeeCode != null">
         employee_code = #{record.employeeCode,jdbcType=VARCHAR},
       </if>
@@ -205,12 +206,13 @@
   <update id="updateByExample" parameterType="map">
     update correlation
     set id = #{record.id,jdbcType=INTEGER},
-      employee_code = #{record.employeeCode,jdbcType=VARCHAR},
-      employee_name = #{record.employeeName,jdbcType=VARCHAR},
-      service_code = #{record.serviceCode,jdbcType=VARCHAR},
-      service_name = #{record.serviceName,jdbcType=VARCHAR},
-      virtue = #{record.virtue,jdbcType=VARCHAR},
-      status = #{record.status,jdbcType=TINYINT}
+    code = #{record.code,jdbcType=VARCHAR},
+    employee_code = #{record.employeeCode,jdbcType=VARCHAR},
+    employee_name = #{record.employeeName,jdbcType=VARCHAR},
+    service_code = #{record.serviceCode,jdbcType=VARCHAR},
+    service_name = #{record.serviceName,jdbcType=VARCHAR},
+    virtue = #{record.virtue,jdbcType=VARCHAR},
+    status = #{record.status,jdbcType=TINYINT}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -218,6 +220,9 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Correlation">
     update correlation
     <set>
+      <if test="code != null">
+        code = #{code,jdbcType=VARCHAR},
+      </if>
       <if test="employeeCode != null">
         employee_code = #{employeeCode,jdbcType=VARCHAR},
       </if>
@@ -241,7 +246,8 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Correlation">
     update correlation
-    set employee_code = #{employeeCode,jdbcType=VARCHAR},
+    set code = #{code,jdbcType=VARCHAR},
+      employee_code = #{employeeCode,jdbcType=VARCHAR},
       employee_name = #{employeeName,jdbcType=VARCHAR},
       service_code = #{serviceCode,jdbcType=VARCHAR},
       service_name = #{serviceName,jdbcType=VARCHAR},
