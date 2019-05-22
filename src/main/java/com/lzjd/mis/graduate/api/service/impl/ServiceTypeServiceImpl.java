@@ -70,7 +70,7 @@ public class ServiceTypeServiceImpl implements ServiceTypeService {
         try {
             PageHelper.startPage(serviceTypeViewVo.getPageNo(), serviceTypeViewVo.getPageSize());
             List<ServiceType> contractResDTOList = serviceTypeMapper.getList();
-            BasePage<ServiceType> basePage = PageUtil.getPageList(serviceTypeViewVo.getPageSize(),contractResDTOList);
+            BasePage<ServiceType> basePage = PageUtil.getPageList(serviceTypeViewVo.getPageNo(),contractResDTOList);
             return HttpResponse.success(basePage);
         } catch (Exception e) {
             e.printStackTrace();

@@ -59,7 +59,7 @@ public class CommentsServiceImpl implements CommentsService {
         try{
             PageHelper.startPage(commentsViewReqVo.getPageNo(),commentsViewReqVo.getPageSize());
             List<Comments> contractResDTOList = commentsMapper.getList(commentsViewReqVo);
-            BasePage<Comments> basePage = PageUtil.getPageList(commentsViewReqVo.getPageSize(),contractResDTOList);
+            BasePage<Comments> basePage = PageUtil.getPageList(commentsViewReqVo.getPageNo(),contractResDTOList);
             return HttpResponse.success(basePage);
         } catch (Exception e) {
             e.printStackTrace();

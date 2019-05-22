@@ -31,7 +31,7 @@ public class WageServiceImpl implements WageService {
         try {
             PageHelper.startPage(wageViewVo.getPageNo(), wageViewVo.getPageSize());
             List<Wage> contractResDTOList = wageMapper.getList();
-            BasePage<Wage> basePage = PageUtil.getPageList(wageViewVo.getPageSize(), contractResDTOList);
+            BasePage<Wage> basePage = PageUtil.getPageList(wageViewVo.getPageNo(), contractResDTOList);
             return HttpResponse.success(basePage);
 
         } catch (Exception ex) {

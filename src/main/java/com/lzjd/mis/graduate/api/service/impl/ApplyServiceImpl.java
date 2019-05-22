@@ -72,7 +72,7 @@ public class ApplyServiceImpl  implements ApplyService  {
             }
             PageHelper.startPage(applyViewReqVo.getPageNo(), applyViewReqVo.getPageSize());
             List<Apply> contractResDTOList = applyMapper.getList(applyViewReqVo);
-            BasePage<Apply> basePage = PageUtil.getPageList(applyViewReqVo.getPageSize(),contractResDTOList);
+            BasePage<Apply> basePage = PageUtil.getPageList(applyViewReqVo.getPageNo(),contractResDTOList);
             return HttpResponse.success(basePage);
 
         } catch (Exception ex) {

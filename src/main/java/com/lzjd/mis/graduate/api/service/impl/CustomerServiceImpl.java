@@ -102,7 +102,7 @@ private EncodingRuleDao encodingRuleDao;
         try {
         PageHelper.startPage(customerReqVo.getPageNo(), customerReqVo.getPageSize());
         List<Customer> contractResDTOList = customerMapper.getList();
-        BasePage<Customer> basePage = PageUtil.getPageList(customerReqVo.getPageSize(),contractResDTOList);
+        BasePage<Customer> basePage = PageUtil.getPageList(customerReqVo.getPageNo(),contractResDTOList);
         return HttpResponse.success(basePage);
 
     } catch (Exception ex) {

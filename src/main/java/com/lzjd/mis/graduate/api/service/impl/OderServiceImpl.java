@@ -67,7 +67,7 @@ public class OderServiceImpl implements OderService {
 
             PageHelper.startPage(queryOderReqVo.getPageNo(), queryOderReqVo.getPageSize());
             List<Oder> contractResDTOList = oderMapper.getList(queryOderReqVo);
-            BasePage<Oder> basePage = PageUtil.getPageList(queryOderReqVo.getPageSize(),contractResDTOList);
+            BasePage<Oder> basePage = PageUtil.getPageList(queryOderReqVo.getPageNo(),contractResDTOList);
             return HttpResponse.success(basePage);
         } catch (Exception e) {
             e.printStackTrace();

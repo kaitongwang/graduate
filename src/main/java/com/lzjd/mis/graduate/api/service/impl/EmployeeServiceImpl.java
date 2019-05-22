@@ -139,7 +139,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         try {
             PageHelper.startPage(employee.getPageNo(), employee.getPageSize());
             List<EmployeeHomeVo> contractResDTOList = employeeMapper.getHomeList(employee.getServiceCode());
-            BasePage<EmployeeHomeVo> basePage = PageUtil.getPageList(employee.getPageSize(),contractResDTOList);
+            BasePage<EmployeeHomeVo> basePage = PageUtil.getPageList(employee.getPageNo(),contractResDTOList);
             return HttpResponse.success(basePage);
         } catch (Exception ex) {
             return HttpResponse.failure("查询失败");

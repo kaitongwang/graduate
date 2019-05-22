@@ -76,7 +76,7 @@ public class DictionaryServiceImpl implements DictionaryService {
         try {
             PageHelper.startPage(employee.getPageNo(), employee.getPageSize());
             List<Dictionary> contractResDTOList = dictionaryMapper.getList();
-            BasePage<Dictionary> basePage = PageUtil.getPageList(employee.getPageSize(),contractResDTOList);
+            BasePage<Dictionary> basePage = PageUtil.getPageList(employee.getPageNo(),contractResDTOList);
             return HttpResponse.success(basePage);
         } catch (Exception e) {
             e.printStackTrace();

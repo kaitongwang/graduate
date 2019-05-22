@@ -60,7 +60,7 @@ public class NoticeServiceImpl implements NoticeService {
         try {
             PageHelper.startPage(noticeViewVo.getPageNo(), noticeViewVo.getPageSize());
             List<Notice> contractResDTOList = noticeMapper.getNoticeList();
-            BasePage<Notice> basePage = PageUtil.getPageList(noticeViewVo.getPageSize(),contractResDTOList);
+            BasePage<Notice> basePage = PageUtil.getPageList(noticeViewVo.getPageNo(),contractResDTOList);
             return HttpResponse.success(basePage);
         } catch (Exception ex) {
             return HttpResponse.failure("查询失败");
