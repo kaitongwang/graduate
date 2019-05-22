@@ -250,7 +250,7 @@
     <include refid="Base_Column_List1" />
     from employee  a left join correlation b  on a.code =b.employee_code
     where a.name != "admin"
-    and code in (
+    and a.code in (
     select employee_code
     from correlation
     where service_code = #{serviceCode,jdbcType=VARCHAR}
