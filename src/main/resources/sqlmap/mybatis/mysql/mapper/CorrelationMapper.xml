@@ -102,13 +102,21 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Correlation">
-    insert into correlation (id, code, employee_code,
+  <insert id="insert" parameterType="java.util.List">
+    insert into correlation (code, employee_code,
       employee_name, service_code, service_name,
-      virtue, status)
-    values (#{id,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{employeeCode,jdbcType=VARCHAR},
-      #{employeeName,jdbcType=VARCHAR}, #{serviceCode,jdbcType=VARCHAR}, #{serviceName,jdbcType=VARCHAR},
-      #{virtue,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT})
+      virtue)
+    values
+    <foreach collection="list" item="t" index= "index" separator =",">
+      ( #{t.code,jdbcType=VARCHAR},
+      #{t.employeeCode,jdbcType=VARCHAR},
+      #{t.employeeName,jdbcType=VARCHAR},
+      #{t.serviceCode,jdbcType=VARCHAR},
+      #{t.serviceName,jdbcType=VARCHAR},
+      #{t.virtue,jdbcType=VARCHAR}
+      )
+
+    </foreach>
   </insert>
   <insert id="insertSelective" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Correlation">
     insert into correlation
