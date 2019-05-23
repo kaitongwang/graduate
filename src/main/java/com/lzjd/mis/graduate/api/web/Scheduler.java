@@ -31,9 +31,13 @@ public class Scheduler {
         schedulerService.updateOderRule();
     }
 
-//
-//    @Scheduled(cron = "0 0 0 0 1-12 ?")
-//    public void test(){
-//        System.out.println("------每月生成工资条-------");
-//    }
+
+    /**
+     * 定时任务器，每月1号0时去生成工资条
+     */
+    @Scheduled(cron = "0 0 0 1 1-12 ? ")
+    public void createWages(){
+        System.out.println("------每月生成工资条-------");
+        schedulerService.createWages();
+    }
 }

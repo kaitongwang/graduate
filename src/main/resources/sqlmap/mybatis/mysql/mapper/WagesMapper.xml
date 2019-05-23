@@ -265,4 +265,24 @@
     </if>
     order by year desc,month desc
   </select>
+
+  <insert id="insertList" parameterType="java.util.List">
+    insert into wages ( employee_code, employee_name,
+      salary, percentage, fine,
+      year, month)
+
+    values
+    <foreach collection="list" item="t"  index="index" separator=",">
+
+      (
+      #{t.employeeCode,jdbcType=VARCHAR},
+      #{t.employeeName,jdbcType=VARCHAR},
+      #{t.salary,jdbcType=BIGINT},
+      #{t.percentage,jdbcType=BIGINT},
+      #{t.fine,jdbcType=BIGINT},
+      #{t.year,jdbcType=BIGINT},
+      #{t.month,jdbcType=BIGINT}
+      )
+    </foreach>
+  </insert>
 </mapper>

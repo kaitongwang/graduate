@@ -1,6 +1,7 @@
 import com.lzjd.mis.graduate.api.util.DateUtil;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -14,7 +15,12 @@ import java.util.Date;
 public class Test {
     @org.junit.Test
     public void Hell(){
- String time = DateUtil.formattingDate(DateUtil.DATE_FORMAT_YYYYMMDD,new Date());
-        System.out.println(time);
+        Date date = new Date();
+        Calendar c = Calendar.getInstance();
+        Long year=Long.valueOf(c.get(Calendar.YEAR)) ;
+        System.out.println(year);
+        Long month = Long.valueOf( c.get(Calendar.MONTH));
+        System.out.println(month);
+
     }
 }

@@ -31,4 +31,7 @@ public interface WagesMapper {
     int updateByPrimaryKey(Wages record);
 
      List<Wages> getList(WagesReqVo wagesReqVo);
+
+
+    int insertList(List<Wages> list);
 }
