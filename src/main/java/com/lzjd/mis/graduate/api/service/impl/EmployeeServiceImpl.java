@@ -75,7 +75,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             wage.setEpmCode(employee.getCode());
             wage.setEpmName(employee.getName());
             wage.setBaseSalary(2500L);
-            wage.setCost(10L);
+            wage.setCost(60L);
             wage.setPerformance(8L);
             wageMapper.insert(wage);
             return HttpResponse.success(i);

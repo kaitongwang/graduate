@@ -13,6 +13,7 @@
     <result column="apply_satatus_name" jdbcType="VARCHAR" property="applySatatusName" />
     <result column="apply_time" jdbcType="TIMESTAMP" property="applyTime" />
     <result column="audit_time" jdbcType="TIMESTAMP" property="auditTime" />
+    <result column="audit_opinion" jdbcType="VARCHAR" property="auditOpinion" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -73,11 +74,25 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, apply_code, apply_text, apply_user_code, apply_user_name, apply_type_code, apply_type_name, 
-    apply_status_code, apply_satatus_name, apply_time, audit_time
+    id, apply_code, apply_text, apply_user_code, apply_user_name, apply_type_code, apply_type_name,
+    apply_status_code, apply_satatus_name, apply_time, audit_time, audit_opinion
   </sql>
+  <select id="selectByExample" parameterType="com.lzjd.mis.graduate.api.domain.pojo.ApplyExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from apply
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
-    select 
+    select
     <include refid="Base_Column_List" />
     from apply
     where id = #{id,jdbcType=BIGINT}
@@ -86,15 +101,23 @@
     delete from apply
     where id = #{id,jdbcType=BIGINT}
   </delete>
+  <delete id="deleteByExample" parameterType="com.lzjd.mis.graduate.api.domain.pojo.ApplyExample">
+    delete from apply
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
   <insert id="insert" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Apply">
-    insert into apply (id, apply_code, apply_text, 
-      apply_user_code, apply_user_name, apply_type_code, 
-      apply_type_name, apply_status_code, apply_satatus_name, 
-      apply_time, audit_time)
-    values (#{id,jdbcType=BIGINT}, #{applyCode,jdbcType=VARCHAR}, #{applyText,jdbcType=VARCHAR}, 
-      #{applyUserCode,jdbcType=VARCHAR}, #{applyUserName,jdbcType=VARCHAR}, #{applyTypeCode,jdbcType=VARCHAR}, 
-      #{applyTypeName,jdbcType=VARCHAR}, #{applyStatusCode,jdbcType=VARCHAR}, #{applySatatusName,jdbcType=VARCHAR}, 
-      #{applyTime,jdbcType=TIMESTAMP}, #{auditTime,jdbcType=TIMESTAMP})
+    insert into apply (id, apply_code, apply_text,
+      apply_user_code, apply_user_name, apply_type_code,
+      apply_type_name, apply_status_code, apply_satatus_name,
+      apply_time, audit_time, audit_opinion
+      )
+    values (#{id,jdbcType=BIGINT}, #{applyCode,jdbcType=VARCHAR}, #{applyText,jdbcType=VARCHAR},
+      #{applyUserCode,jdbcType=VARCHAR}, #{applyUserName,jdbcType=VARCHAR}, #{applyTypeCode,jdbcType=VARCHAR},
+      #{applyTypeName,jdbcType=VARCHAR}, #{applyStatusCode,jdbcType=VARCHAR}, #{applySatatusName,jdbcType=VARCHAR},
+      #{applyTime,jdbcType=TIMESTAMP}, #{auditTime,jdbcType=TIMESTAMP}, #{auditOpinion,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Apply">
     insert into apply
@@ -132,6 +155,9 @@
       <if test="auditTime != null">
         audit_time,
       </if>
+      <if test="auditOpinion != null">
+        audit_opinion,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -167,9 +193,79 @@
       <if test="auditTime != null">
         #{auditTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="auditOpinion != null">
+        #{auditOpinion,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
-
+  <select id="countByExample" parameterType="com.lzjd.mis.graduate.api.domain.pojo.ApplyExample" resultType="java.lang.Long">
+    select count(*) from apply
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update apply
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.applyCode != null">
+        apply_code = #{record.applyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.applyText != null">
+        apply_text = #{record.applyText,jdbcType=VARCHAR},
+      </if>
+      <if test="record.applyUserCode != null">
+        apply_user_code = #{record.applyUserCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.applyUserName != null">
+        apply_user_name = #{record.applyUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.applyTypeCode != null">
+        apply_type_code = #{record.applyTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.applyTypeName != null">
+        apply_type_name = #{record.applyTypeName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.applyStatusCode != null">
+        apply_status_code = #{record.applyStatusCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.applySatatusName != null">
+        apply_satatus_name = #{record.applySatatusName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.applyTime != null">
+        apply_time = #{record.applyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.auditTime != null">
+        audit_time = #{record.auditTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.auditOpinion != null">
+        audit_opinion = #{record.auditOpinion,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update apply
+    set id = #{record.id,jdbcType=BIGINT},
+    apply_code = #{record.applyCode,jdbcType=VARCHAR},
+    apply_text = #{record.applyText,jdbcType=VARCHAR},
+    apply_user_code = #{record.applyUserCode,jdbcType=VARCHAR},
+    apply_user_name = #{record.applyUserName,jdbcType=VARCHAR},
+    apply_type_code = #{record.applyTypeCode,jdbcType=VARCHAR},
+    apply_type_name = #{record.applyTypeName,jdbcType=VARCHAR},
+    apply_status_code = #{record.applyStatusCode,jdbcType=VARCHAR},
+    apply_satatus_name = #{record.applySatatusName,jdbcType=VARCHAR},
+    apply_time = #{record.applyTime,jdbcType=TIMESTAMP},
+    audit_time = #{record.auditTime,jdbcType=TIMESTAMP},
+    audit_opinion = #{record.auditOpinion,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
   <update id="updateByPrimaryKeySelective" parameterType="com.lzjd.mis.graduate.api.domain.pojo.Apply">
     update apply
     <set>
@@ -203,6 +299,9 @@
       <if test="auditTime != null">
         audit_time = #{auditTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="auditOpinion != null">
+        audit_opinion = #{auditOpinion,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
@@ -217,10 +316,10 @@
       apply_status_code = #{applyStatusCode,jdbcType=VARCHAR},
       apply_satatus_name = #{applySatatusName,jdbcType=VARCHAR},
       apply_time = #{applyTime,jdbcType=TIMESTAMP},
-      audit_time = #{auditTime,jdbcType=TIMESTAMP}
+      audit_time = #{auditTime,jdbcType=TIMESTAMP},
+      audit_opinion = #{auditOpinion,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
-
   <select id="getList" parameterType="com.lzjd.mis.graduate.api.domain.request.ApplyViewReqVo" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />

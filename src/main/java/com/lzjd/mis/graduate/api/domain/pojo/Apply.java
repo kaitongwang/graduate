@@ -43,6 +43,9 @@ public class Apply {
     @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
     private Date auditTime;
 
+    @ApiModelProperty("审核意见")
+    private String auditOpinion;
+
     public Long getId() {
         return id;
     }
@@ -129,5 +132,13 @@ public class Apply {
 
     public void setAuditTime(Date auditTime) {
         this.auditTime = auditTime;
+    }
+
+    public String getAuditOpinion() {
+        return auditOpinion;
+    }
+
+    public void setAuditOpinion(String auditOpinion) {
+        this.auditOpinion = auditOpinion;
     }
 }
