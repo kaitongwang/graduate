@@ -7,17 +7,23 @@ import com.lzjd.mis.graduate.api.base.common.PageUtil;
 import com.lzjd.mis.graduate.api.base.enumtype.EncodingRuleType;
 import com.lzjd.mis.graduate.api.dao.mapper.EncodingRuleDao;
 import com.lzjd.mis.graduate.api.dao.mapper.OderMapper;
+import com.lzjd.mis.graduate.api.dao.mapper.WageMapper;
+import com.lzjd.mis.graduate.api.dao.mapper.WagesMapper;
 import com.lzjd.mis.graduate.api.domain.pojo.EncodingRule;
 import com.lzjd.mis.graduate.api.domain.pojo.Oder;
+import com.lzjd.mis.graduate.api.domain.pojo.Wage;
+import com.lzjd.mis.graduate.api.domain.pojo.Wages;
 import com.lzjd.mis.graduate.api.domain.request.QueryOderReqVo;
 import com.lzjd.mis.graduate.api.service.OderService;
 import com.lzjd.mis.graduate.api.util.DateUtil;
 import com.lzjd.mis.graduate.api.util.StringUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -38,6 +44,11 @@ public class OderServiceImpl implements OderService {
     @Autowired
     private OderMapper oderMapper;
 
+    @Autowired
+    private WageMapper wageMapper;
+
+    @Autowired
+    private WagesMapper wagesMapper;
 
     @Override
     @Transactional(rollbackFor = Exception.class)
@@ -89,11 +100,34 @@ public class OderServiceImpl implements OderService {
     @Override
     public HttpResponse update(Oder oder) {
         try {
+
+
+            if(oder.getStatusCode().equals("3")){
+                // 异步处理工资条提成更改
+                updateWags(oder);
+            }
             int  i = oderMapper.updateByPrimaryKeySelective(oder);
             return HttpResponse.success(i);
         } catch (Exception e) {
             e.printStackTrace();
             return HttpResponse.failure("更新失败");
         }
+    }
+
+    @Override
+//    @Async("taskProductExecutor")
+    public void updateWags(Oder oder) {
+        //查询工资信息
+        Wage wage =  wageMapper.getByEmpCode(oder.getEmployeeCode());
+        Wages wages = new Wages();
+        wages.setEmployeeCode(wage.getEpmCode());
+        Calendar c = Calendar.getInstance();
+        Long year=Long.valueOf(c.get(Calendar.YEAR)) ;
+        Long month = Long.valueOf( c.get(Calendar.MONTH));
+        wages.setMonth(month);
+        wages.setYear(year);
+        Wages wages1 = wagesMapper.selectByOder(wages);
+        wages1.setPercentage( wages1.getPercentage()+oder.getCost()*wage.getCost()/100);
+        wagesMapper.updateByPrimaryKeySelective(wages1);
     }
 }

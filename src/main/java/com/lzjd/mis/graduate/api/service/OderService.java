@@ -28,4 +28,7 @@ public interface OderService {
 
 
       HttpResponse update(Oder oder);
+
+
+      void updateWags(Oder oder);
 }

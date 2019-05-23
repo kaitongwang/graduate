@@ -30,4 +30,6 @@ public interface WageMapper {
     int updateByPrimaryKey(Wage record);
 
     List<Wage>getList();
+
+    Wage getByEmpCode( @Param("epmCode") String epmCode);
 }

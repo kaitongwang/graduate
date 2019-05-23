@@ -34,4 +34,7 @@ public interface WagesMapper {
 
 
     int insertList(List<Wages> list);
+
+    Wages selectByOder(Wages wages);
+
 }

@@ -231,4 +231,11 @@
     <include refid="Base_Column_List" />
     from wage
   </select>
+
+  <select id="getByEmpCode" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from wage
+    where epm_code = #{epmCode,jdbcType=VARCHAR}
+  </select>
 </mapper>
