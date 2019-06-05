@@ -11,6 +11,13 @@
     <result column="year" jdbcType="BIGINT" property="year" />
     <result column="month" jdbcType="BIGINT" property="month" />
   </resultMap>
+  <resultMap id="BaseResultMap1" type="com.lzjd.mis.graduate.api.domain.responses.WagesTotal">
+    <result column="salary1" jdbcType="BIGINT" property="salary" />
+    <result column="percentage1" jdbcType="BIGINT" property="percentage" />
+    <result column="fine1" jdbcType="BIGINT" property="fine" />
+    <result column="year" jdbcType="BIGINT" property="year" />
+    <result column="month" jdbcType="BIGINT" property="month" />
+  </resultMap>
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -71,6 +78,9 @@
   </sql>
   <sql id="Base_Column_List">
     id, employee_code, employee_name, salary, percentage, fine, year, month
+  </sql>
+  <sql id="Base_Column_List1">
+    year,month,sum(salary) as salary1,sum(percentage) as percentage1,sum(fine) as fine1
   </sql>
   <select id="selectByExample" parameterType="com.lzjd.mis.graduate.api.domain.pojo.WagesExample" resultMap="BaseResultMap">
     select
@@ -298,5 +308,13 @@
     year = #{year,jdbcType=BIGINT}
     and
     month = #{month,jdbcType=BIGINT}
+  </select>
+
+  <select id="getTotalWages" resultMap="BaseResultMap1">
+    select
+    <include refid="Base_Column_List1" />
+    from wages
+    group by year,month
+    order by year desc ,month desc
   </select>
 </mapper>

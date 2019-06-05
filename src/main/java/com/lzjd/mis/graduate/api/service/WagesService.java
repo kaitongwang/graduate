@@ -22,4 +22,5 @@ public interface WagesService {
 
     HttpResponse update( Wages wages);
 
+    HttpResponse getTotalWages();
 }

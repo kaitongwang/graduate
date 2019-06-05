@@ -36,6 +36,7 @@ public class Scheduler {
      * 定时任务器，每月1号0时去生成工资条
      */
     @Scheduled(cron = "0 0 0 1 1-12 ? ")
+//    @Scheduled(cron = "0 0,20 11 1-31 * ? ")
     public void createWages(){
         System.out.println("------每月生成工资条-------");
         schedulerService.createWages();

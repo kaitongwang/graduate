@@ -3,6 +3,7 @@ package com.lzjd.mis.graduate.api.dao.mapper;
 import com.lzjd.mis.graduate.api.domain.pojo.Wages;
 import com.lzjd.mis.graduate.api.domain.pojo.WagesExample;
 import com.lzjd.mis.graduate.api.domain.request.WagesReqVo;
+import com.lzjd.mis.graduate.api.domain.responses.WagesTotal;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -36,5 +37,7 @@ public interface WagesMapper {
     int insertList(List<Wages> list);
 
     Wages selectByOder(Wages wages);
+
+    List<WagesTotal> getTotalWages();
 
 }

@@ -46,9 +46,16 @@ public class WagesController {
     public HttpResponse view(@RequestParam("id") Integer  id){
         return  wagesService.view(id);
     }
+
     @ApiOperation("修改工资条")
     @PostMapping("/update")
     public HttpResponse update(@RequestBody Wages wages){
         return  wagesService.update(wages);
+    }
+
+    @ApiOperation("获取总工资")
+    @PostMapping("/getTotalWages")
+    public HttpResponse getTotalWages(){
+        return  wagesService.getTotalWages();
     }
 }

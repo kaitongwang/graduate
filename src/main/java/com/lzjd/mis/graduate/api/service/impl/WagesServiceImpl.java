@@ -8,6 +8,7 @@ import com.lzjd.mis.graduate.api.dao.mapper.WagesMapper;
 import com.lzjd.mis.graduate.api.domain.pojo.Wage;
 import com.lzjd.mis.graduate.api.domain.pojo.Wages;
 import com.lzjd.mis.graduate.api.domain.request.WagesReqVo;
+import com.lzjd.mis.graduate.api.domain.responses.WagesTotal;
 import com.lzjd.mis.graduate.api.service.WagesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -71,5 +72,19 @@ public class WagesServiceImpl implements WagesService {
         e.printStackTrace();
         return HttpResponse.failure("修改失败");
     }
+    }
+
+    @Override
+    public HttpResponse getTotalWages() {
+        try {
+            List<WagesTotal> totals = wagesMapper.getTotalWages();
+            totals.stream().forEach(wagesTotal -> {
+                wagesTotal.setTotalWages(wagesTotal.getSalary()+wagesTotal.getPercentage()-wagesTotal.getFine());
+            });
+            return HttpResponse.success(totals);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return HttpResponse.failure("查询失败");
+        }
     }
 }

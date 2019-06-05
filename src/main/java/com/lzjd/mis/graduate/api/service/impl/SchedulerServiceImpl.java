@@ -70,7 +70,7 @@ public class SchedulerServiceImpl  implements SchedulerService {
         }
         Calendar c = Calendar.getInstance();
         Long year=Long.valueOf(c.get(Calendar.YEAR)) ;
-        Long month = Long.valueOf( c.get(Calendar.MONTH));
+        Long month = Long.valueOf( c.get(Calendar.MONTH)+1);
       wages1.stream().forEach(wages3-> wages3.setYear(year));
       wages1.stream().forEach(wages3-> wages3.setMonth(month));
 

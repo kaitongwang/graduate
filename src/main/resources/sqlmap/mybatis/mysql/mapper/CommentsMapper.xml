@@ -297,7 +297,7 @@
     where    employees_code = #{employeesCode,jdbcType=VARCHAR}
         group by score_name;
   </select>
-  <select id="getView"  parameterType="java.lang.String "  resultMap="BaseResultMap">
+  <select id="getView"  parameterType="string"  resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"></include>
     from comments
