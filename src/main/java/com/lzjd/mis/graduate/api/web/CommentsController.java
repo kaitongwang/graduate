@@ -3,14 +3,14 @@ package com.lzjd.mis.graduate.api.web;
 import com.lzjd.mis.graduate.api.base.common.HttpResponse;
 import com.lzjd.mis.graduate.api.domain.pojo.Comments;
 import com.lzjd.mis.graduate.api.domain.request.CommentsViewReqVo;
+import com.lzjd.mis.graduate.api.domain.responses.CommentReqVo;
 import com.lzjd.mis.graduate.api.service.CommentsService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @Classname: CommentsController
@@ -40,7 +40,16 @@ public class CommentsController {
     public HttpResponse getList(@RequestBody CommentsViewReqVo commentsViewReqVo){
        return commentsService.getList(commentsViewReqVo);
    }
+    @PostMapping("/getDegree")
+    @ApiOperation("获得评价统计")
+   public HttpResponse getDegree(@RequestParam(value = "employeesCode") String employeesCode){
+        return commentsService.getDegree(employeesCode);
 
-
+   }
+    @PostMapping("/getView")
+    @ApiOperation("根据订单编码查询评论")
+    public HttpResponse getView(@RequestParam(value = "oder_Code") String oder_Code){
+        return commentsService.getView(oder_Code);
+    }
 
 }

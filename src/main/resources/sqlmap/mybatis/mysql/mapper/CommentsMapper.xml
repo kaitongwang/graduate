@@ -73,6 +73,8 @@
   <sql id="Base_Column_List">
     id, code, oder_code, customer_code, employees_code, text, picture, score_code, score_name
   </sql>
+  <sql id="base_degree_list">
+   count(*)as satisfactionNum ,score_name  name </sql>
   <select id="selectByExample" parameterType="com.lzjd.mis.graduate.api.domain.pojo.CommentsExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
@@ -287,5 +289,18 @@
     <if test="employeesCode != null">
       and employees_code = #{employeesCode,jdbcType=VARCHAR}
     </if>
+  </select>
+  <select id="getDegree"  parameterType="string" resultType="com.lzjd.mis.graduate.api.domain.responses.CommentReqVo">
+    select
+<include refid="base_degree_list"></include>
+    from comments
+    where    employees_code = #{employeesCode,jdbcType=VARCHAR}
+        group by score_name;
+  </select>
+  <select id="getView"  parameterType="java.lang.String "  resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"></include>
+    from comments
+    where    oder_code = #{oderCode,jdbcType=VARCHAR}
   </select>
 </mapper>

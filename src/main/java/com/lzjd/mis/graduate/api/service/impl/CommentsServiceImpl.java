@@ -10,6 +10,7 @@ import com.lzjd.mis.graduate.api.dao.mapper.EncodingRuleDao;
 import com.lzjd.mis.graduate.api.domain.pojo.Comments;
 import com.lzjd.mis.graduate.api.domain.pojo.EncodingRule;
 import com.lzjd.mis.graduate.api.domain.request.CommentsViewReqVo;
+import com.lzjd.mis.graduate.api.domain.responses.CommentReqVo;
 import com.lzjd.mis.graduate.api.service.CommentsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -65,6 +66,28 @@ public class CommentsServiceImpl implements CommentsService {
             e.printStackTrace();
             return HttpResponse.failure("查询失败");
 
+        }
+    }
+
+    @Override
+    public HttpResponse getDegree(String employeesCode) {
+        try {
+            List<CommentReqVo> commentReqVos = commentsMapper.getDegree(employeesCode);
+          return   HttpResponse.success(commentReqVos);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return HttpResponse.success("查询失败");
+        }
+    }
+
+    @Override
+    public HttpResponse getView(String oderCode) {
+        try {
+            Comments comments = commentsMapper.getView(oderCode);
+            return   HttpResponse.success(comments);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return HttpResponse.success("查询失败");
         }
     }
 }

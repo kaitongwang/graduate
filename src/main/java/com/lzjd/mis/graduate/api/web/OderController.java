@@ -56,4 +56,11 @@ private OderService oderService;
     public HttpResponse update(@RequestBody Oder oder){
         return oderService.update(oder);
     }
+
+    @GetMapping("/delete")
+    @ApiOperation("删除订单信息")
+    public HttpResponse delete(@RequestParam(value = "id") Long id ){
+        return oderService.delete(id);
+    }
+
 }

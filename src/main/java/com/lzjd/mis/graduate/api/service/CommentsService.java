@@ -3,6 +3,7 @@ package com.lzjd.mis.graduate.api.service;
 import com.lzjd.mis.graduate.api.base.common.HttpResponse;
 import com.lzjd.mis.graduate.api.domain.pojo.Comments;
 import com.lzjd.mis.graduate.api.domain.request.CommentsViewReqVo;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @Classname: CommentsService
@@ -21,4 +22,11 @@ public interface CommentsService {
     HttpResponse add(Comments comments);
 
     HttpResponse getList(CommentsViewReqVo commentsViewReqVo);
+
+    HttpResponse getDegree(String employeesCode);
+
+    HttpResponse getView( String oder_Code);
+
+
+
 }

@@ -1,5 +1,6 @@
 package com.lzjd.mis.graduate.api.web;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.lzjd.mis.graduate.api.base.common.HttpResponse;
 import com.lzjd.mis.graduate.api.domain.pojo.Notice;
 import com.lzjd.mis.graduate.api.domain.request.NoticeViewVo;
@@ -62,6 +63,13 @@ public class NoticeController {
     public HttpResponse getPageList(){
             return noticeService.getPageList();
 
+    }
+
+
+    @GetMapping("/delete")
+    @ApiOperation("删除公告信息")
+    public HttpResponse delete(@RequestParam(value = "id") Long id ){
+        return noticeService.delete(id);
     }
 
 }

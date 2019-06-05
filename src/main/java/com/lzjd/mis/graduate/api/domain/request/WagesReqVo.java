@@ -6,7 +6,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
- * @Classname: WagesReqVo
+ * @Classname: CommentReqVo
  * 描述:工资条列表展示请求保实体
  * @Author: Kt.w
  * @Date: 2019/5/22

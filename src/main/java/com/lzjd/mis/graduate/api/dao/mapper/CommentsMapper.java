@@ -1,8 +1,10 @@
 package com.lzjd.mis.graduate.api.dao.mapper;
 
+import com.lzjd.mis.graduate.api.base.common.HttpResponse;
 import com.lzjd.mis.graduate.api.domain.pojo.Comments;
 import com.lzjd.mis.graduate.api.domain.pojo.CommentsExample;
 import com.lzjd.mis.graduate.api.domain.request.CommentsViewReqVo;
+import com.lzjd.mis.graduate.api.domain.responses.CommentReqVo;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -32,4 +34,15 @@ public interface CommentsMapper {
 
 
    List<Comments> getList(CommentsViewReqVo commentsViewReqVo);
+
+
+   List<CommentReqVo> getDegree(String employeesCode);
+
+
+    /**
+     * 根据订单编码查询评论
+     * @param oder_Code
+     * @return
+     */
+    Comments getView(String oder_Code);
 }

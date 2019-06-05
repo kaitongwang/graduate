@@ -11,6 +11,7 @@ import com.lzjd.mis.graduate.api.domain.pojo.EncodingRule;
 import com.lzjd.mis.graduate.api.domain.pojo.Notice;
 import com.lzjd.mis.graduate.api.domain.request.NoticeViewVo;
 import com.lzjd.mis.graduate.api.service.NoticeService;
+import com.sun.corba.se.spi.ior.IdentifiableFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -97,6 +98,17 @@ public class NoticeServiceImpl implements NoticeService {
         } catch (Exception e) {
             e.printStackTrace();
             return HttpResponse.failure("获取失败");
+        }
+    }
+
+    @Override
+    public HttpResponse delete(Long id) {
+        try {
+          int i =noticeMapper.deleteByPrimaryKey(id);
+            return HttpResponse.success(i);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return HttpResponse.failure("删除失败");
         }
     }
 }

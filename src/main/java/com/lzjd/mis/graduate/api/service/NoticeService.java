@@ -47,4 +47,11 @@ public interface NoticeService {
      * @return
      */
     HttpResponse getPageList();
+
+    /**
+     * 删除订单
+     * @param id
+     * @return
+     */
+    HttpResponse delete( Long id );
 }

@@ -31,4 +31,6 @@ public interface OderService {
 
 
       void updateWags(Oder oder);
+
+    HttpResponse delete( Long id );
 }

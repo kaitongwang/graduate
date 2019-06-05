@@ -130,4 +130,15 @@ public class OderServiceImpl implements OderService {
         wages1.setPercentage( wages1.getPercentage()+oder.getCost()*wage.getCost()/100);
         wagesMapper.updateByPrimaryKeySelective(wages1);
     }
+
+    @Override
+    public HttpResponse delete(Long id) {
+        try {
+            int i = oderMapper.deleteByPrimaryKey(id);
+            return HttpResponse.success(i);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return  HttpResponse.failure("删除失败");
+        }
+    }
 }
