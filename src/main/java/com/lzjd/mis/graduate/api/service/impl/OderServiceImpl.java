@@ -123,7 +123,7 @@ public class OderServiceImpl implements OderService {
         wages.setEmployeeCode(wage.getEpmCode());
         Calendar c = Calendar.getInstance();
         Long year=Long.valueOf(c.get(Calendar.YEAR)) ;
-        Long month = Long.valueOf( c.get(Calendar.MONTH));
+        Long month = Long.valueOf( c.get(Calendar.MONTH)+1);
         wages.setMonth(month);
         wages.setYear(year);
         Wages wages1 = wagesMapper.selectByOder(wages);
