@@ -280,13 +280,13 @@
     <include refid="Base_Column_List" />
     from comments
     where  1=1
-    <if test="oderCode != null">
+    <if test="oderCode != null and oderCode!=''">
      and oder_code = #{oderCode,jdbcType=VARCHAR}
     </if>
-    <if test="customerCode != null">
+    <if test="customerCode != null and customerCode!=''">
       and   customer_code = #{customerCode,jdbcType=VARCHAR}
     </if>
-    <if test="employeesCode != null">
+    <if test="employeesCode != null and  employeesCode!=''">
       and employees_code = #{employeesCode,jdbcType=VARCHAR}
     </if>
   </select>
