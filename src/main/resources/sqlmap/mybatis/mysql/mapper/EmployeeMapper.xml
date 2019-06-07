@@ -79,7 +79,7 @@
   </sql>
 
   <sql id="Base_Column_List1">
-    a.id, a.code, a.name, a.password, a.sex, a.phone, a.status_code, a.status_name, a.picture, a.address,b.virtue
+    a.id, a.code, a.name, a.password, a.sex, a.phone, a.status_code, a.status_name, a.picture, a.address
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
